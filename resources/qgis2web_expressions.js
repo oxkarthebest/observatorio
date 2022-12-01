@@ -766,7 +766,267 @@ function fnc_project_color(values, context) {
 
 
 
-function exp_ARRENDO_9rule0_eval_expression(context) {
+function exp_U_TERRENO_6rule0_eval_expression(context) {
+    // "OFERTAS_OBSERVATORIO_Tipo_de_Of" = 'VENTA' AND "OFERTAS_OBSERVATORIO_Valor" >= 0 AND "OFERTAS_OBSERVATORIO_Valor" <= 6e+07
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'VENTA') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 0.0)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 60000000.0));
+    } else {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'VENTA') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 0.0)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 60000000.0));
+    }
+}
+
+
+function exp_U_TERRENO_6rule1_eval_expression(context) {
+    // "OFERTAS_OBSERVATORIO_Tipo_de_Of" = 'VENTA' AND "OFERTAS_OBSERVATORIO_Valor" >= 6e+07 AND "OFERTAS_OBSERVATORIO_Valor" <= 1.02727e+08
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'VENTA') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 60000000.0)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 102727272.727273));
+    } else {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'VENTA') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 60000000.0)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 102727272.727273));
+    }
+}
+
+
+function exp_U_TERRENO_6rule2_eval_expression(context) {
+    // "OFERTAS_OBSERVATORIO_Tipo_de_Of" = 'VENTA' AND "OFERTAS_OBSERVATORIO_Valor" >= 1.02727e+08 AND "OFERTAS_OBSERVATORIO_Valor" <= 1.3e+08
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'VENTA') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 102727272.727273)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 130000000.0));
+    } else {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'VENTA') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 102727272.727273)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 130000000.0));
+    }
+}
+
+
+function exp_U_TERRENO_6rule3_eval_expression(context) {
+    // "OFERTAS_OBSERVATORIO_Tipo_de_Of" = 'VENTA' AND "OFERTAS_OBSERVATORIO_Valor" >= 1.3e+08 AND "OFERTAS_OBSERVATORIO_Valor" <= 1.6e+08
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'VENTA') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 130000000.0)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 160000000.0));
+    } else {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'VENTA') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 130000000.0)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 160000000.0));
+    }
+}
+
+
+function exp_U_TERRENO_6rule4_eval_expression(context) {
+    // "OFERTAS_OBSERVATORIO_Tipo_de_Of" = 'VENTA' AND "OFERTAS_OBSERVATORIO_Valor" >= 1.6e+08 AND "OFERTAS_OBSERVATORIO_Valor" <= 1.95909e+08
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'VENTA') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 160000000.0)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 195909090.909091));
+    } else {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'VENTA') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 160000000.0)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 195909090.909091));
+    }
+}
+
+
+function exp_U_TERRENO_6rule5_eval_expression(context) {
+    // "OFERTAS_OBSERVATORIO_Tipo_de_Of" = 'VENTA' AND "OFERTAS_OBSERVATORIO_Valor" >= 1.95909e+08 AND "OFERTAS_OBSERVATORIO_Valor" <= 2.5e+08
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'VENTA') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 195909090.909091)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 250000000.0));
+    } else {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'VENTA') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 195909090.909091)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 250000000.0));
+    }
+}
+
+
+function exp_U_TERRENO_6rule6_eval_expression(context) {
+    // "OFERTAS_OBSERVATORIO_Tipo_de_Of" = 'VENTA' AND "OFERTAS_OBSERVATORIO_Valor" >= 2.5e+08 AND "OFERTAS_OBSERVATORIO_Valor" <= 3e+08
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'VENTA') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 250000000.0)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 300000000.0));
+    } else {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'VENTA') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 250000000.0)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 300000000.0));
+    }
+}
+
+
+function exp_U_TERRENO_6rule7_eval_expression(context) {
+    // "OFERTAS_OBSERVATORIO_Tipo_de_Of" = 'VENTA' AND "OFERTAS_OBSERVATORIO_Valor" >= 3e+08 AND "OFERTAS_OBSERVATORIO_Valor" <= 3.6e+08
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'VENTA') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 300000000.0)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 360000000.0));
+    } else {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'VENTA') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 300000000.0)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 360000000.0));
+    }
+}
+
+
+function exp_U_TERRENO_6rule8_eval_expression(context) {
+    // "OFERTAS_OBSERVATORIO_Tipo_de_Of" = 'VENTA' AND "OFERTAS_OBSERVATORIO_Valor" >= 3.6e+08 AND "OFERTAS_OBSERVATORIO_Valor" <= 5.5e+08
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'VENTA') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 360000000.0)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 550000000.0));
+    } else {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'VENTA') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 360000000.0)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 550000000.0));
+    }
+}
+
+
+function exp_U_TERRENO_6rule9_eval_expression(context) {
+    // "OFERTAS_OBSERVATORIO_Tipo_de_Of" = 'VENTA' AND "OFERTAS_OBSERVATORIO_Valor" >= 5.5e+08 AND "OFERTAS_OBSERVATORIO_Valor" <= 1.975e+09
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'VENTA') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 550000000.0)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 1975000000.0));
+    } else {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'VENTA') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 550000000.0)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 1975000000.0));
+    }
+}
+
+
+function exp_U_TERRENO_6rule11_eval_expression(context) {
+    // "OFERTAS_OBSERVATORIO_Tipo_de_Of" = 'ARRIENDO' AND "OFERTAS_OBSERVATORIO_Valor" >= 0 AND "OFERTAS_OBSERVATORIO_Valor" <= 250000
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'ARRIENDO') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 0.0)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 250000.0));
+    } else {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'ARRIENDO') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 0.0)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 250000.0));
+    }
+}
+
+
+function exp_U_TERRENO_6rule12_eval_expression(context) {
+    // "OFERTAS_OBSERVATORIO_Tipo_de_Of" = 'ARRIENDO' AND "OFERTAS_OBSERVATORIO_Valor" >= 250000 AND "OFERTAS_OBSERVATORIO_Valor" <= 350000
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'ARRIENDO') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 250000.0)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 350000.0));
+    } else {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'ARRIENDO') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 250000.0)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 350000.0));
+    }
+}
+
+
+function exp_U_TERRENO_6rule13_eval_expression(context) {
+    // "OFERTAS_OBSERVATORIO_Tipo_de_Of" = 'ARRIENDO' AND "OFERTAS_OBSERVATORIO_Valor" >= 350000 AND "OFERTAS_OBSERVATORIO_Valor" <= 394211
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'ARRIENDO') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 350000.0)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 394210.526316));
+    } else {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'ARRIENDO') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 350000.0)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 394210.526316));
+    }
+}
+
+
+function exp_U_TERRENO_6rule14_eval_expression(context) {
+    // "OFERTAS_OBSERVATORIO_Tipo_de_Of" = 'ARRIENDO' AND "OFERTAS_OBSERVATORIO_Valor" >= 394211 AND "OFERTAS_OBSERVATORIO_Valor" <= 450000
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'ARRIENDO') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 394210.526316)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 450000.0));
+    } else {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'ARRIENDO') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 394210.526316)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 450000.0));
+    }
+}
+
+
+function exp_U_TERRENO_6rule15_eval_expression(context) {
+    // "OFERTAS_OBSERVATORIO_Tipo_de_Of" = 'ARRIENDO' AND "OFERTAS_OBSERVATORIO_Valor" >= 450000 AND "OFERTAS_OBSERVATORIO_Valor" <= 550789
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'ARRIENDO') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 450000.0)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 550789.473684));
+    } else {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'ARRIENDO') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 450000.0)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 550789.473684));
+    }
+}
+
+
+function exp_U_TERRENO_6rule16_eval_expression(context) {
+    // "OFERTAS_OBSERVATORIO_Tipo_de_Of" = 'ARRIENDO' AND "OFERTAS_OBSERVATORIO_Valor" >= 550789 AND "OFERTAS_OBSERVATORIO_Valor" <= 622632
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'ARRIENDO') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 550789.473684)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 622631.578947));
+    } else {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'ARRIENDO') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 550789.473684)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 622631.578947));
+    }
+}
+
+
+function exp_U_TERRENO_6rule17_eval_expression(context) {
+    // "OFERTAS_OBSERVATORIO_Tipo_de_Of" = 'ARRIENDO' AND "OFERTAS_OBSERVATORIO_Valor" >= 622632 AND "OFERTAS_OBSERVATORIO_Valor" <= 750000
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'ARRIENDO') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 622631.578947)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 750000.0));
+    } else {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'ARRIENDO') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 622631.578947)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 750000.0));
+    }
+}
+
+
+function exp_U_TERRENO_6rule18_eval_expression(context) {
+    // "OFERTAS_OBSERVATORIO_Tipo_de_Of" = 'ARRIENDO' AND "OFERTAS_OBSERVATORIO_Valor" >= 750000 AND "OFERTAS_OBSERVATORIO_Valor" <= 1.1e+06
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'ARRIENDO') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 750000.0)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 1100000.0));
+    } else {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'ARRIENDO') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 750000.0)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 1100000.0));
+    }
+}
+
+
+function exp_U_TERRENO_6rule19_eval_expression(context) {
+    // "OFERTAS_OBSERVATORIO_Tipo_de_Of" = 'ARRIENDO' AND "OFERTAS_OBSERVATORIO_Valor" >= 1.1e+06 AND "OFERTAS_OBSERVATORIO_Valor" <= 1.3e+06
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'ARRIENDO') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 1100000.0)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 1300000.0));
+    } else {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'ARRIENDO') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 1100000.0)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 1300000.0));
+    }
+}
+
+
+function exp_U_TERRENO_6rule20_eval_expression(context) {
+    // "OFERTAS_OBSERVATORIO_Tipo_de_Of" = 'ARRIENDO' AND "OFERTAS_OBSERVATORIO_Valor" >= 1.3e+06 AND "OFERTAS_OBSERVATORIO_Valor" <= 7.5e+06
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'ARRIENDO') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 1300000.0)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 7500000.0));
+    } else {
+        return (((feature.get('OFERTAS_OBSERVATORIO_Tipo_de_Of')  == 'ARRIENDO') && (feature.get('OFERTAS_OBSERVATORIO_Valor')  >= 1300000.0)) && (feature.get('OFERTAS_OBSERVATORIO_Valor')  <= 7500000.0));
+    }
+}
+
+
+function exp_OFERTAS_OBSERVATORIO_7rule0_eval_expression(context) {
     // "Tipo_de_Of" = 'ARRIENDO'
 
     var feature = context.feature;
@@ -779,7 +1039,7 @@ function exp_ARRENDO_9rule0_eval_expression(context) {
 }
 
 
-function exp_VENTA_10rule0_eval_expression(context) {
+function exp_OFERTAS_OBSERVATORIO_7rule1_eval_expression(context) {
     // "Tipo_de_Of" = 'VENTA'
 
     var feature = context.feature;
