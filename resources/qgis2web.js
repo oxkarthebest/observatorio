@@ -69,7 +69,7 @@ var map = new ol.Map({
     overlays: [overlayPopup],
     layers: layersList,
     view: new ol.View({
-        extent: [-8390709.587323, 321099.473510, -8367849.336567, 332932.043347], maxZoom: 28, minZoom: 1
+        maxZoom: 28, minZoom: 1
     })
 });
 
@@ -155,7 +155,7 @@ var onPointerMove = function(evt) {
                 for(var n=0; n<clusteredFeatures.length; n++) {
                     clusterFeature = clusteredFeatures[n];
                     currentFeatureKeys = clusterFeature.getKeys();
-                    popupText += '<li><table>'
+                    popupText += 'aaaaaa<li><table>'
                     for (var i=0; i<currentFeatureKeys.length; i++) {
                         if (currentFeatureKeys[i] != 'geometry') {
                             popupField = '';
@@ -181,7 +181,7 @@ var onPointerMove = function(evt) {
         } else {
             currentFeatureKeys = currentFeature.getKeys();
             if (doPopup) {
-                popupText += '<li><table>';
+                popupText += 'cccccc<li><table>';
                 for (var i=0; i<currentFeatureKeys.length; i++) {
                     if (currentFeatureKeys[i] != 'geometry') {
                         popupField = '';
@@ -298,7 +298,7 @@ var onSingleClick = function(evt) {
                     for(var n=0; n<clusteredFeatures.length; n++) {
                         clusterFeature = clusteredFeatures[n];
                         currentFeatureKeys = clusterFeature.getKeys();
-                        popupText += '<li><table>'
+                        popupText += 'bbbbbb<li><table>'
                         for (var i=0; i<currentFeatureKeys.length; i++) {
                             if (currentFeatureKeys[i] != 'geometry') {
                                 popupField = '';
@@ -324,6 +324,11 @@ var onSingleClick = function(evt) {
             } else {
                 currentFeatureKeys = currentFeature.getKeys();
                 if (doPopup) {
+                    if(layer.values_.name === undefined){
+                        popupText += '<li><table>'
+                    } else {
+                        popupText += '<h1 id="title-popup" class="title-popup">' + layer.values_.name + '<li><table>'
+                    }
                     popupText += '<li><table>';
                     for (var i=0; i<currentFeatureKeys.length; i++) {
                         if (currentFeatureKeys[i] != 'geometry') {
@@ -337,7 +342,13 @@ var onSingleClick = function(evt) {
                                 popupField += '<strong>' + layer.get('fieldAliases')[currentFeatureKeys[i]] + ':</strong><br />';
                             }
                             if (layer.get('fieldImages')[currentFeatureKeys[i]] != "ExternalResource") {
-                                popupField += (currentFeature.get(currentFeatureKeys[i]) != null ? autolinker.link(currentFeature.get(currentFeatureKeys[i]).toLocaleString()) + '</td>' : '');
+                                if(currentFeatureKeys[i] === 'Telefono'){
+                                    //replace last 4 digits with *
+                                    var phone = currentFeature.get(currentFeatureKeys[i]);
+                                    popupField += (currentFeature.get(currentFeatureKeys[i]) != null ? autolinker.link(phone.replace(phone.substr(phone.length - 4), '****').toLocaleString()) + '</td>' : '');
+                                }else{
+                                    popupField += (currentFeature.get(currentFeatureKeys[i]) != null ? autolinker.link(currentFeature.get(currentFeatureKeys[i]).toLocaleString()) + '</td>' : '');
+                                }                              
                             } else {
                                 popupField += (currentFeature.get(currentFeatureKeys[i]) != null ? '<img src="images/' + currentFeature.get(currentFeatureKeys[i]).replace(/[\\\/:]/g, '_').trim()  + '" /></td>' : '');
                             }
@@ -372,6 +383,7 @@ var onSingleClick = function(evt) {
 
     if (popupText) {
         overlayPopup.setPosition(coord);
+        map.getView().animate({center:coord,duration:700});
         content.innerHTML = popupText;
         container.style.display = 'block';        
     } else {

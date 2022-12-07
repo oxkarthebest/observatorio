@@ -14,6 +14,7 @@ maxResolution:1.414225540689229,
  
                 style: style_550millones1975millones_0,
                 interactive: true,
+                name: 'Oferta',
                 title: '<img src="styles/legend/550millones1975millones_0.png" /> 550millones - 1975millones'
             });
 var format_360millones550millones_1 = new ol.format.GeoJSON();
@@ -30,6 +31,7 @@ maxResolution:1.414225540689229,
  
                 style: style_360millones550millones_1,
                 interactive: true,
+                name: 'Oferta',
                 title: '<img src="styles/legend/360millones550millones_1.png" /> 360millones - 550millones'
             });
 var format_300millones360millones_2 = new ol.format.GeoJSON();
@@ -46,6 +48,7 @@ maxResolution:1.414225540689229,
  
                 style: style_300millones360millones_2,
                 interactive: true,
+                name: 'Oferta',
                 title: '<img src="styles/legend/300millones360millones_2.png" /> 300millones - 360millones'
             });
 var format_250millones300millones_3 = new ol.format.GeoJSON();
@@ -62,6 +65,7 @@ maxResolution:1.414225540689229,
  
                 style: style_250millones300millones_3,
                 interactive: true,
+                name: 'Oferta',
                 title: '<img src="styles/legend/250millones300millones_3.png" /> 250millones - 300millones'
             });
 var format_195millones250millones_4 = new ol.format.GeoJSON();
@@ -78,6 +82,7 @@ maxResolution:1.414225540689229,
  
                 style: style_195millones250millones_4,
                 interactive: true,
+                name: 'Oferta',
                 title: '<img src="styles/legend/195millones250millones_4.png" /> 195millones - 250millones'
             });
 var format_160millones195millones_5 = new ol.format.GeoJSON();
@@ -94,6 +99,7 @@ maxResolution:1.414225540689229,
  
                 style: style_160millones195millones_5,
                 interactive: true,
+                name: 'Oferta',
                 title: '<img src="styles/legend/160millones195millones_5.png" /> 160millones - 195millones'
             });
 var format_130millones160millones_6 = new ol.format.GeoJSON();
@@ -110,6 +116,7 @@ maxResolution:1.414225540689229,
  
                 style: style_130millones160millones_6,
                 interactive: true,
+                name: 'Oferta',
                 title: '<img src="styles/legend/130millones160millones_6.png" /> 130millones - 160millones'
             });
 var format_102millones130millones_7 = new ol.format.GeoJSON();
@@ -126,6 +133,7 @@ maxResolution:1.414225540689229,
  
                 style: style_102millones130millones_7,
                 interactive: true,
+                name: 'Oferta',
                 title: '<img src="styles/legend/102millones130millones_7.png" /> 102millones - 130millones'
             });
 var format_60millones102millones_8 = new ol.format.GeoJSON();
@@ -142,6 +150,7 @@ maxResolution:1.414225540689229,
  
                 style: style_60millones102millones_8,
                 interactive: true,
+                name: 'Oferta',
                 title: '<img src="styles/legend/60millones102millones_8.png" /> 60millones - 102millones'
             });
 var format_60millones_9 = new ol.format.GeoJSON();
@@ -158,6 +167,7 @@ maxResolution:1.414225540689229,
  
                 style: style_60millones_9,
                 interactive: true,
+                name: 'Oferta',
                 title: '<img src="styles/legend/60millones_9.png" /> -60millones'
             });
 var format_13millones75millones_10 = new ol.format.GeoJSON();
@@ -174,6 +184,7 @@ maxResolution:1.414225540689229,
  
                 style: style_13millones75millones_10,
                 interactive: true,
+                name: 'Oferta',
                 title: '<img src="styles/legend/13millones75millones_10.png" /> 1.3millones - 7.5millones '
             });
 var format_107millones13millones_11 = new ol.format.GeoJSON();
@@ -190,6 +201,7 @@ maxResolution:1.414225540689229,
  
                 style: style_107millones13millones_11,
                 interactive: true,
+                name: 'Oferta',
                 title: '<img src="styles/legend/107millones13millones_11.png" /> 1.07millones - 1.3millones'
             });
 var format_704mil107millones_12 = new ol.format.GeoJSON();
@@ -206,6 +218,7 @@ maxResolution:1.414225540689229,
  
                 style: style_704mil107millones_12,
                 interactive: true,
+                name: 'Oferta',
                 title: '<img src="styles/legend/704mil107millones_12.png" /> 704mil - 1.07millones'
             });
 var format_600mil704mil_13 = new ol.format.GeoJSON();
@@ -222,6 +235,7 @@ maxResolution:1.414225540689229,
  
                 style: style_600mil704mil_13,
                 interactive: true,
+                name: 'Oferta',
                 title: '<img src="styles/legend/600mil704mil_13.png" /> 600mil - 704mil'
             });
 var format_540mil600mil_14 = new ol.format.GeoJSON();
@@ -238,6 +252,7 @@ maxResolution:1.414225540689229,
  
                 style: style_540mil600mil_14,
                 interactive: true,
+                name: 'Oferta',
                 title: '<img src="styles/legend/540mil600mil_14.png" /> 540mil - 600mil'
             });
 var format_450mil540mil_15 = new ol.format.GeoJSON();
@@ -254,6 +269,7 @@ maxResolution:1.414225540689229,
  
                 style: style_450mil540mil_15,
                 interactive: true,
+                name: 'Oferta',
                 title: '<img src="styles/legend/450mil540mil_15.png" /> 450mil - 540mil'
             });
 var format_350mil450mil_16 = new ol.format.GeoJSON();
@@ -270,6 +286,7 @@ maxResolution:1.414225540689229,
  
                 style: style_350mil450mil_16,
                 interactive: true,
+                name: 'Oferta',
                 title: '<img src="styles/legend/350mil450mil_16.png" /> 350mil - 450mil'
             });
 var format_300mil350mil_17 = new ol.format.GeoJSON();
@@ -286,6 +303,7 @@ maxResolution:1.414225540689229,
  
                 style: style_300mil350mil_17,
                 interactive: true,
+                name: 'Oferta',
                 title: '<img src="styles/legend/300mil350mil_17.png" /> 300mil - 350mil'
             });
 var format_60mil300mil_18 = new ol.format.GeoJSON();
@@ -302,6 +320,7 @@ maxResolution:1.414225540689229,
  
                 style: style_60mil300mil_18,
                 interactive: true,
+                name: 'Oferta',
                 title: '<img src="styles/legend/60mil300mil_18.png" /> 60mil - 300mil'
             });
 var format_60mil_19 = new ol.format.GeoJSON();
@@ -318,6 +337,7 @@ maxResolution:1.414225540689229,
  
                 style: style_60mil_19,
                 interactive: true,
+                name: 'Oferta',
                 title: '<img src="styles/legend/60mil_19.png" /> -60mil'
             });
 
@@ -368,6 +388,7 @@ var lyr_Perimetro_23 = new ol.layer.Vector({
                 source:jsonSource_Perimetro_23, 
                 style: style_Perimetro_23,
                 interactive: true,
+                name: 'Perimetro',
                 title: '<img src="styles/legend/Perimetro_23.png" /> Perimetro'
             });
 var format_Manzana_24 = new ol.format.GeoJSON();
@@ -384,6 +405,7 @@ maxResolution:2.4425495378002884,
  
                 style: style_Manzana_24,
                 interactive: true,
+                name: 'Manzana',
                 title: '<img src="styles/legend/Manzana_24.png" /> Manzana'
             });
 var format_Sector_25 = new ol.format.GeoJSON();
@@ -398,6 +420,7 @@ var lyr_Sector_25 = new ol.layer.Vector({
                 source:jsonSource_Sector_25, 
                 style: style_Sector_25,
                 interactive: false,
+                name: 'Sector',
                 title: '<img src="styles/legend/Perimetro_23.png" /> Sector'
             });
 var format_Terreno_26 = new ol.format.GeoJSON();
@@ -414,6 +437,7 @@ maxResolution:0.706832725683092,
  
                 style: style_Terreno_26,
                 interactive: true,
+                name: 'Terreno',
                 title: '<img src="styles/legend/Terreno_26.png" /> Terreno'
             });
 var format_U_NOMENCLATRURA_VIAL_27 = new ol.format.GeoJSON();
@@ -444,6 +468,7 @@ var lyr_Venta_28 = new ol.layer.Vector({
                 source:jsonSource_Venta_28, 
                 style: style_Venta_28,
                 interactive: true,
+                name: 'Venta',
                 title: '<img src="styles/legend/Venta_28.png" /> Venta'
             });
 var format_Arriendo_29 = new ol.format.GeoJSON();
@@ -458,6 +483,7 @@ var lyr_Arriendo_29 = new ol.layer.Vector({
                 source:jsonSource_Arriendo_29, 
                 style: style_Arriendo_29,
                 interactive: true,
+                name: 'Arriendo',
                 title: '<img src="styles/legend/Arriendo_29.png" /> Arriendo'
             });
 var group_Arriendo = new ol.layer.Group({
@@ -469,33 +495,34 @@ var group_Venta = new ol.layer.Group({
 
 lyr_550millones1975millones_0.setVisible(true);lyr_360millones550millones_1.setVisible(true);lyr_300millones360millones_2.setVisible(true);lyr_250millones300millones_3.setVisible(true);lyr_195millones250millones_4.setVisible(true);lyr_160millones195millones_5.setVisible(true);lyr_130millones160millones_6.setVisible(true);lyr_102millones130millones_7.setVisible(true);lyr_60millones102millones_8.setVisible(true);lyr_60millones_9.setVisible(true);lyr_13millones75millones_10.setVisible(true);lyr_107millones13millones_11.setVisible(true);lyr_704mil107millones_12.setVisible(true);lyr_600mil704mil_13.setVisible(true);lyr_540mil600mil_14.setVisible(true);lyr_450mil540mil_15.setVisible(true);lyr_350mil450mil_16.setVisible(true);lyr_300mil350mil_17.setVisible(true);lyr_60mil300mil_18.setVisible(true);lyr_60mil_19.setVisible(true);lyr_NoMap_20.setVisible(false);lyr_CartoDbDarkMatter_21.setVisible(false);lyr_CartoDbPositron_22.setVisible(true);lyr_Perimetro_23.setVisible(true);lyr_Manzana_24.setVisible(true);lyr_Sector_25.setVisible(true);lyr_Terreno_26.setVisible(true);lyr_U_NOMENCLATRURA_VIAL_27.setVisible(true);lyr_Venta_28.setVisible(true);lyr_Arriendo_29.setVisible(true);
 var layersList = [lyr_NoMap_20,lyr_CartoDbDarkMatter_21,lyr_CartoDbPositron_22,lyr_Perimetro_23,lyr_Sector_25,lyr_Manzana_24,lyr_Terreno_26,group_Venta,group_Arriendo,lyr_U_NOMENCLATRURA_VIAL_27,lyr_Venta_28,lyr_Arriendo_29];
-lyr_550millones1975millones_0.set('fieldAliases', {'CODIGO': 'CODIGO', 'ÁREA_M2': 'ÁREA_M2', 'O_Valor': 'O_Valor', 'O_Tipo_de_Of': 'O_Tipo_de_Of', });
-lyr_360millones550millones_1.set('fieldAliases', {'CODIGO': 'CODIGO', 'ÁREA_M2': 'ÁREA_M2', 'O_Valor': 'O_Valor', 'O_Tipo_de_Of': 'O_Tipo_de_Of', });
-lyr_300millones360millones_2.set('fieldAliases', {'CODIGO': 'CODIGO', 'ÁREA_M2': 'ÁREA_M2', 'O_Valor': 'O_Valor', 'O_Tipo_de_Of': 'O_Tipo_de_Of', });
-lyr_250millones300millones_3.set('fieldAliases', {'CODIGO': 'CODIGO', 'ÁREA_M2': 'ÁREA_M2', 'O_Valor': 'O_Valor', 'O_Tipo_de_Of': 'O_Tipo_de_Of', });
-lyr_195millones250millones_4.set('fieldAliases', {'CODIGO': 'CODIGO', 'ÁREA_M2': 'ÁREA_M2', 'O_Valor': 'O_Valor', 'O_Tipo_de_Of': 'O_Tipo_de_Of', });
-lyr_160millones195millones_5.set('fieldAliases', {'CODIGO': 'CODIGO', 'ÁREA_M2': 'ÁREA_M2', 'O_Valor': 'O_Valor', 'O_Tipo_de_Of': 'O_Tipo_de_Of', });
-lyr_130millones160millones_6.set('fieldAliases', {'CODIGO': 'CODIGO', 'ÁREA_M2': 'ÁREA_M2', 'O_Valor': 'O_Valor', 'O_Tipo_de_Of': 'O_Tipo_de_Of', });
-lyr_102millones130millones_7.set('fieldAliases', {'CODIGO': 'CODIGO', 'ÁREA_M2': 'ÁREA_M2', 'O_Valor': 'O_Valor', 'O_Tipo_de_Of': 'O_Tipo_de_Of', });
-lyr_60millones102millones_8.set('fieldAliases', {'CODIGO': 'CODIGO', 'ÁREA_M2': 'ÁREA_M2', 'O_Valor': 'O_Valor', 'O_Tipo_de_Of': 'O_Tipo_de_Of', });
-lyr_60millones_9.set('fieldAliases', {'CODIGO': 'CODIGO', 'ÁREA_M2': 'ÁREA_M2', 'O_Valor': 'O_Valor', 'O_Tipo_de_Of': 'O_Tipo_de_Of', });
-lyr_13millones75millones_10.set('fieldAliases', {'CODIGO': 'CODIGO', 'ÁREA_M2': 'ÁREA_M2', 'O_Valor': 'O_Valor', 'O_Tipo_de_Of': 'O_Tipo_de_Of', });
-lyr_107millones13millones_11.set('fieldAliases', {'CODIGO': 'CODIGO', 'ÁREA_M2': 'ÁREA_M2', 'O_Valor': 'O_Valor', 'O_Tipo_de_Of': 'O_Tipo_de_Of', });
-lyr_704mil107millones_12.set('fieldAliases', {'CODIGO': 'CODIGO', 'ÁREA_M2': 'ÁREA_M2', 'O_Valor': 'O_Valor', 'O_Tipo_de_Of': 'O_Tipo_de_Of', });
-lyr_600mil704mil_13.set('fieldAliases', {'CODIGO': 'CODIGO', 'ÁREA_M2': 'ÁREA_M2', 'O_Valor': 'O_Valor', 'O_Tipo_de_Of': 'O_Tipo_de_Of', });
-lyr_540mil600mil_14.set('fieldAliases', {'CODIGO': 'CODIGO', 'ÁREA_M2': 'ÁREA_M2', 'O_Valor': 'O_Valor', 'O_Tipo_de_Of': 'O_Tipo_de_Of', });
-lyr_450mil540mil_15.set('fieldAliases', {'CODIGO': 'CODIGO', 'ÁREA_M2': 'ÁREA_M2', 'O_Valor': 'O_Valor', 'O_Tipo_de_Of': 'O_Tipo_de_Of', });
-lyr_350mil450mil_16.set('fieldAliases', {'CODIGO': 'CODIGO', 'ÁREA_M2': 'ÁREA_M2', 'O_Valor': 'O_Valor', 'O_Tipo_de_Of': 'O_Tipo_de_Of', });
-lyr_300mil350mil_17.set('fieldAliases', {'CODIGO': 'CODIGO', 'ÁREA_M2': 'ÁREA_M2', 'O_Valor': 'O_Valor', 'O_Tipo_de_Of': 'O_Tipo_de_Of', });
-lyr_60mil300mil_18.set('fieldAliases', {'CODIGO': 'CODIGO', 'ÁREA_M2': 'ÁREA_M2', 'O_Valor': 'O_Valor', 'O_Tipo_de_Of': 'O_Tipo_de_Of', });
-lyr_60mil_19.set('fieldAliases', {'CODIGO': 'CODIGO', 'ÁREA_M2': 'ÁREA_M2', 'O_Valor': 'O_Valor', 'O_Tipo_de_Of': 'O_Tipo_de_Of', });
-lyr_Perimetro_23.set('fieldAliases', {'NOMBRE_GEO': 'NOMBRE_GEO', 'AREA_Ha': 'AREA_Ha', 'AREA_m²': 'AREA_m²', });
-lyr_Manzana_24.set('fieldAliases', {'OBJECTID': 'OBJECTID', 'CODIGO': 'CODIGO', 'AREA_M2': 'AREA_M2', });
+lyr_550millones1975millones_0.set('fieldAliases', {'CODIGO': 'Codigo', 'ÁREA_M2': 'Área m²', 'O_Valor': 'Valor', 'O_Tipo_de_Of': 'Tipo de Of', });
+lyr_360millones550millones_1.set('fieldAliases', {'CODIGO': 'Codigo', 'ÁREA_M2': 'Área m²', 'O_Valor': 'Valor', 'O_Tipo_de_Of': 'Tipo de Of', });
+lyr_300millones360millones_2.set('fieldAliases', {'CODIGO': 'Codigo', 'ÁREA_M2': 'Área m²', 'O_Valor': 'Valor', 'O_Tipo_de_Of': 'Tipo de Of', });
+lyr_250millones300millones_3.set('fieldAliases', {'CODIGO': 'Codigo', 'ÁREA_M2': 'Área m²', 'O_Valor': 'Valor', 'O_Tipo_de_Of': 'Tipo de Of', });
+lyr_195millones250millones_4.set('fieldAliases', {'CODIGO': 'Codigo', 'ÁREA_M2': 'Área m²', 'O_Valor': 'Valor', 'O_Tipo_de_Of': 'Tipo de Of', });
+lyr_160millones195millones_5.set('fieldAliases', {'CODIGO': 'Codigo', 'ÁREA_M2': 'Área m²', 'O_Valor': 'Valor', 'O_Tipo_de_Of': 'Tipo de Of', });
+lyr_130millones160millones_6.set('fieldAliases', {'CODIGO': 'Codigo', 'ÁREA_M2': 'Área m²', 'O_Valor': 'Valor', 'O_Tipo_de_Of': 'Tipo de Of', });
+lyr_102millones130millones_7.set('fieldAliases', {'CODIGO': 'Codigo', 'ÁREA_M2': 'Área m²', 'O_Valor': 'Valor', 'O_Tipo_de_Of': 'Tipo de Of', });
+lyr_60millones102millones_8.set('fieldAliases', {'CODIGO': 'Codigo', 'ÁREA_M2': 'Área m²', 'O_Valor': 'Valor', 'O_Tipo_de_Of': 'Tipo de Of', });
+lyr_60millones_9.set('fieldAliases', {'CODIGO': 'Codigo', 'ÁREA_M2': 'Área m²', 'O_Valor': 'Valor', 'O_Tipo_de_Of': 'Tipo de Of', });
+lyr_13millones75millones_10.set('fieldAliases', {'CODIGO': 'Codigo', 'ÁREA_M2': 'Área m²', 'O_Valor': 'Valor', 'O_Tipo_de_Of': 'Tipo de Of', });
+lyr_107millones13millones_11.set('fieldAliases', {'CODIGO': 'Codigo', 'ÁREA_M2': 'Área m²', 'O_Valor': 'Valor', 'O_Tipo_de_Of': 'Tipo de Of', });
+lyr_704mil107millones_12.set('fieldAliases', {'CODIGO': 'Codigo', 'ÁREA_M2': 'Área m²', 'O_Valor': 'Valor', 'O_Tipo_de_Of': 'Tipo de Of', });
+lyr_600mil704mil_13.set('fieldAliases', {'CODIGO': 'Codigo', 'ÁREA_M2': 'Área m²', 'O_Valor': 'Valor', 'O_Tipo_de_Of': 'Tipo de Of', });
+lyr_540mil600mil_14.set('fieldAliases', {'CODIGO': 'Codigo', 'ÁREA_M2': 'Área m²', 'O_Valor': 'Valor', 'O_Tipo_de_Of': 'Tipo de Of', });
+lyr_450mil540mil_15.set('fieldAliases', {'CODIGO': 'Codigo', 'ÁREA_M2': 'Área m²', 'O_Valor': 'Valor', 'O_Tipo_de_Of': 'Tipo de Of', });
+lyr_350mil450mil_16.set('fieldAliases', {'CODIGO': 'Codigo', 'ÁREA_M2': 'Área m²', 'O_Valor': 'Valor', 'O_Tipo_de_Of': 'Tipo de Of', });
+lyr_300mil350mil_17.set('fieldAliases', {'CODIGO': 'Codigo', 'ÁREA_M2': 'Área m²', 'O_Valor': 'Valor', 'O_Tipo_de_Of': 'Tipo de Of', });
+lyr_60mil300mil_18.set('fieldAliases', {'CODIGO': 'Codigo', 'ÁREA_M2': 'Área m²', 'O_Valor': 'Valor', 'O_Tipo_de_Of': 'Tipo de Of', });
+lyr_60mil_19.set('fieldAliases', {'CODIGO': 'Codigo', 'ÁREA_M2': 'Área m²', 'O_Valor': 'Valor', 'O_Tipo_de_Of': 'Tipo de Of', });
+lyr_Perimetro_23.set('fieldAliases', {'NOMBRE_GEO': 'Nombre', 'AREA_Ha': 'Área Ha', 'AREA_m²': 'Área m²', });
+lyr_Manzana_24.set('fieldAliases', {'OBJECTID': 'Identificador', 'CODIGO': 'Codigo', 'AREA_M2': 'Área m²', });
 lyr_Sector_25.set('fieldAliases', {'OBJECTID': 'OBJECTID', 'CODIGO': 'CODIGO', 'USUARIO_LO': 'USUARIO_LO', 'FECHA_LOG': 'FECHA_LOG', 'GLOBALID': 'GLOBALID', 'GLOBALID_S': 'GLOBALID_S', 'CODIGO_MUN': 'CODIGO_MUN', 'SHAPE_Leng': 'SHAPE_Leng', 'SHAPE_Area': 'SHAPE_Area', });
-lyr_Terreno_26.set('fieldAliases', {'CODIGO': 'CODIGO', 'ÁREA_M2': 'ÁREA_M2', });
+lyr_Terreno_26.set('fieldAliases', {'CODIGO': 'Codigo', 'ÁREA_M2': 'Área m²', });
 lyr_U_NOMENCLATRURA_VIAL_27.set('fieldAliases', {'OBJECTID': 'OBJECTID', 'TEXTO': 'TEXTO', });
-lyr_Venta_28.set('fieldAliases', {'OBJECTID': 'OBJECTID', 'CODIGO': 'CODIGO', 'TERRENO_CO': 'TERRENO_CO', 'TIPO_CONST': 'TIPO_CONST', 'TIPO_DOMIN': 'TIPO_DOMIN', 'NUMERO_PIS': 'NUMERO_PIS', 'NUMERO_SOT': 'NUMERO_SOT', 'NUMERO_MEZ': 'NUMERO_MEZ', 'NUMERO_SEM': 'NUMERO_SEM', 'CODIGO_MUN': 'CODIGO_MUN', 'COOR_X': 'COOR_X', 'COOR_Y': 'COOR_Y', 'RASTERVALU': 'RASTERVALU', 'Numero_de_': 'Numero_de_', 'Numero_Pre': 'Numero_Pre', 'Barrio': 'Barrio', 'Direccion': 'Direccion', 'Telefono': 'Telefono', 'Valor': 'Valor', 'Porcentaje': 'Porcentaje', 'Valor_Depu': 'Valor_Depu', 'Fecha': 'Fecha', 'Area_de_Te': 'Area_de_Te', 'Numero_d_1': 'Numero_d_1', 'Numero_d_2': 'Numero_d_2', 'Tipo_de_Co': 'Tipo_de_Co', 'Edad_del_I': 'Edad_del_I', 'Servicios_': 'Servicios_', 'Servicio_1': 'Servicio_1', 'Servicio_2': 'Servicio_2', 'Casa_Canti': 'Casa_Canti', 'Casa_Can_1': 'Casa_Can_1', 'Apto_Canti': 'Apto_Canti', 'Apto_Numer': 'Apto_Numer', 'Apto_Tiene': 'Apto_Tiene', 'Cantidad_d': 'Cantidad_d', 'Garaje_Can': 'Garaje_Can', 'Garaje_Tip': 'Garaje_Tip', 'Garaje_T_1': 'Garaje_T_1', 'Tipo_de_In': 'Tipo_de_In', 'Tipo_de_Of': 'Tipo_de_Of', 'Fuente_Inf': 'Fuente_Inf', });
-lyr_Arriendo_29.set('fieldAliases', {'OBJECTID': 'OBJECTID', 'CODIGO': 'CODIGO', 'TERRENO_CO': 'TERRENO_CO', 'TIPO_CONST': 'TIPO_CONST', 'TIPO_DOMIN': 'TIPO_DOMIN', 'NUMERO_PIS': 'NUMERO_PIS', 'NUMERO_SOT': 'NUMERO_SOT', 'NUMERO_MEZ': 'NUMERO_MEZ', 'NUMERO_SEM': 'NUMERO_SEM', 'CODIGO_MUN': 'CODIGO_MUN', 'COOR_X': 'COOR_X', 'COOR_Y': 'COOR_Y', 'RASTERVALU': 'RASTERVALU', 'Numero_de_': 'Numero_de_', 'Numero_Pre': 'Numero_Pre', 'Barrio': 'Barrio', 'Direccion': 'Direccion', 'Telefono': 'Telefono', 'Valor': 'Valor', 'Porcentaje': 'Porcentaje', 'Valor_Depu': 'Valor_Depu', 'Fecha': 'Fecha', 'Area_de_Te': 'Area_de_Te', 'Numero_d_1': 'Numero_d_1', 'Numero_d_2': 'Numero_d_2', 'Tipo_de_Co': 'Tipo_de_Co', 'Edad_del_I': 'Edad_del_I', 'Servicios_': 'Servicios_', 'Servicio_1': 'Servicio_1', 'Servicio_2': 'Servicio_2', 'Casa_Canti': 'Casa_Canti', 'Casa_Can_1': 'Casa_Can_1', 'Apto_Canti': 'Apto_Canti', 'Apto_Numer': 'Apto_Numer', 'Apto_Tiene': 'Apto_Tiene', 'Cantidad_d': 'Cantidad_d', 'Garaje_Can': 'Garaje_Can', 'Garaje_Tip': 'Garaje_Tip', 'Garaje_T_1': 'Garaje_T_1', 'Tipo_de_In': 'Tipo_de_In', 'Tipo_de_Of': 'Tipo_de_Of', 'Fuente_Inf': 'Fuente_Inf', });
+lyr_Venta_28.set('fieldAliases', {'OBJECTID': 'Identificador', 'CODIGO': 'Codigo', 'TERRENO_CO': 'Codigo Terreno', 'TIPO_CONST': 'Tipo de Construcción', 'TIPO_DOMIN': 'Tipo de Domicilio', 'NUMERO_PIS': 'Numero de Pisos', 'NUMERO_SOT': 'Numero de Sotanos', 'NUMERO_MEZ': 'NUMERO MEZ', 'NUMERO_SEM': 'NUMERO SEM', 'CODIGO_MUN': 'Codigo de Municipio', 'COOR_X': 'COOR X', 'COOR_Y': 'COOR Y', 'RASTERVALU': 'RASTERVALU', 'Numero_de_': 'Numero de', 'Numero_Pre': 'Numero de Predio', 'Barrio': 'Barrio', 'Direccion': 'Direccion', 'Telefono': 'Telefono', 'Valor': 'Valor', 'Porcentaje': 'Porcentaje', 'Valor_Depu': 'Valor Depu', 'Fecha': 'Fecha', 'Area_de_Te': 'Area de Terreno', 'Numero_d_1': 'Numero d1', 'Numero_d_2': 'Numero d2', 'Tipo_de_Co': 'Tipo de Cocina', 'Edad_del_I': 'Edad del Inmueble', 'Servicios_': 'Servicios', 'Servicio_1': 'Servicio 1', 'Servicio_2': 'Servicio 2', 'Casa_Canti': 'Casa Canti', 'Casa_Can_1': 'Casa Can 1', 'Apto_Canti': 'Cantidad de Apto', 'Apto_Numer': 'Numero de Apto', 'Apto_Tiene': 'Tiene Apto', 'Cantidad_d': 'Cantidad_d', 'Garaje_Can': 'Cantidad de Garajes', 'Garaje_Tip': 'Tipo de Garaje', 'Garaje_T_1': 'Garaje T1', 'Tipo_de_In': 'Tipo de Inmueble', 'Tipo_de_Of': 'Tipo de Oferta', 'Fuente_Inf': 'Fuente de Información', });
+lyr_Arriendo_29.set('fieldAliases', {'OBJECTID': 'Identificador', 'CODIGO': 'Codigo', 'TERRENO_CO': 'Codigo Terreno', 'TIPO_CONST': 'Tipo de Construcción', 'TIPO_DOMIN': 'Tipo de Domicilio', 'NUMERO_PIS': 'Numero de Pisos', 'NUMERO_SOT': 'Numero de Sotanos', 'NUMERO_MEZ': 'NUMERO MEZ', 'NUMERO_SEM': 'NUMERO SEM', 'CODIGO_MUN': 'Codigo de Municipio', 'COOR_X': 'COOR X', 'COOR_Y': 'COOR Y', 'RASTERVALU': 'RASTERVALU', 'Numero_de_': 'Numero de', 'Numero_Pre': 'Numero de Predio', 'Barrio': 'Barrio', 'Direccion': 'Direccion', 'Telefono': 'Telefono', 'Valor': 'Valor', 'Porcentaje': 'Porcentaje', 'Valor_Depu': 'Valor Depu', 'Fecha': 'Fecha', 'Area_de_Te': 'Area de Terreno', 'Numero_d_1': 'Numero d1', 'Numero_d_2': 'Numero d2', 'Tipo_de_Co': 'Tipo de Cocina', 'Edad_del_I': 'Edad del Inmueble', 'Servicios_': 'Servicios', 'Servicio_1': 'Servicio 1', 'Servicio_2': 'Servicio 2', 'Casa_Canti': 'Casa Canti', 'Casa_Can_1': 'Casa Can 1', 'Apto_Canti': 'Cantidad de Apto', 'Apto_Numer': 'Numero de Apto', 'Apto_Tiene': 'Tiene Apto', 'Cantidad_d': 'Cantidad_d', 'Garaje_Can': 'Cantidad de Garajes', 'Garaje_Tip': 'Tipo de Garaje', 'Garaje_T_1': 'Garaje T1', 'Tipo_de_In': 'Tipo de Inmueble', 'Tipo_de_Of': 'Tipo de Oferta', 'Fuente_Inf': 'Fuente de Información', });
+
 lyr_550millones1975millones_0.set('fieldImages', {'CODIGO': 'TextEdit', 'ÁREA_M2': 'TextEdit', 'O_Valor': 'TextEdit', 'O_Tipo_de_Of': 'TextEdit', });
 lyr_360millones550millones_1.set('fieldImages', {'CODIGO': 'TextEdit', 'ÁREA_M2': 'TextEdit', 'O_Valor': 'TextEdit', 'O_Tipo_de_Of': 'TextEdit', });
 lyr_300millones360millones_2.set('fieldImages', {'CODIGO': 'TextEdit', 'ÁREA_M2': 'TextEdit', 'O_Valor': 'TextEdit', 'O_Tipo_de_Of': 'TextEdit', });
@@ -523,33 +550,34 @@ lyr_Terreno_26.set('fieldImages', {'CODIGO': 'TextEdit', 'ÁREA_M2': 'TextEdit',
 lyr_U_NOMENCLATRURA_VIAL_27.set('fieldImages', {'OBJECTID': 'TextEdit', 'TEXTO': 'TextEdit', });
 lyr_Venta_28.set('fieldImages', {'OBJECTID': 'TextEdit', 'CODIGO': 'TextEdit', 'TERRENO_CO': 'TextEdit', 'TIPO_CONST': 'TextEdit', 'TIPO_DOMIN': 'TextEdit', 'NUMERO_PIS': 'Range', 'NUMERO_SOT': 'Range', 'NUMERO_MEZ': 'Range', 'NUMERO_SEM': 'Range', 'CODIGO_MUN': 'TextEdit', 'COOR_X': 'TextEdit', 'COOR_Y': 'TextEdit', 'RASTERVALU': 'TextEdit', 'Numero_de_': 'TextEdit', 'Numero_Pre': 'TextEdit', 'Barrio': 'TextEdit', 'Direccion': 'TextEdit', 'Telefono': 'TextEdit', 'Valor': 'TextEdit', 'Porcentaje': 'TextEdit', 'Valor_Depu': 'TextEdit', 'Fecha': 'DateTime', 'Area_de_Te': 'TextEdit', 'Numero_d_1': 'TextEdit', 'Numero_d_2': 'TextEdit', 'Tipo_de_Co': 'TextEdit', 'Edad_del_I': 'TextEdit', 'Servicios_': 'TextEdit', 'Servicio_1': 'TextEdit', 'Servicio_2': 'TextEdit', 'Casa_Canti': 'TextEdit', 'Casa_Can_1': 'TextEdit', 'Apto_Canti': 'TextEdit', 'Apto_Numer': 'TextEdit', 'Apto_Tiene': 'TextEdit', 'Cantidad_d': 'TextEdit', 'Garaje_Can': 'TextEdit', 'Garaje_Tip': 'TextEdit', 'Garaje_T_1': 'TextEdit', 'Tipo_de_In': 'TextEdit', 'Tipo_de_Of': 'TextEdit', 'Fuente_Inf': 'TextEdit', });
 lyr_Arriendo_29.set('fieldImages', {'OBJECTID': 'TextEdit', 'CODIGO': 'TextEdit', 'TERRENO_CO': 'TextEdit', 'TIPO_CONST': 'TextEdit', 'TIPO_DOMIN': 'TextEdit', 'NUMERO_PIS': 'Range', 'NUMERO_SOT': 'Range', 'NUMERO_MEZ': 'Range', 'NUMERO_SEM': 'Range', 'CODIGO_MUN': 'TextEdit', 'COOR_X': 'TextEdit', 'COOR_Y': 'TextEdit', 'RASTERVALU': 'TextEdit', 'Numero_de_': 'TextEdit', 'Numero_Pre': 'TextEdit', 'Barrio': 'TextEdit', 'Direccion': 'TextEdit', 'Telefono': 'TextEdit', 'Valor': 'TextEdit', 'Porcentaje': 'TextEdit', 'Valor_Depu': 'TextEdit', 'Fecha': 'DateTime', 'Area_de_Te': 'TextEdit', 'Numero_d_1': 'TextEdit', 'Numero_d_2': 'TextEdit', 'Tipo_de_Co': 'TextEdit', 'Edad_del_I': 'TextEdit', 'Servicios_': 'TextEdit', 'Servicio_1': 'TextEdit', 'Servicio_2': 'TextEdit', 'Casa_Canti': 'TextEdit', 'Casa_Can_1': 'TextEdit', 'Apto_Canti': 'TextEdit', 'Apto_Numer': 'TextEdit', 'Apto_Tiene': 'TextEdit', 'Cantidad_d': 'TextEdit', 'Garaje_Can': 'TextEdit', 'Garaje_Tip': 'TextEdit', 'Garaje_T_1': 'TextEdit', 'Tipo_de_In': 'TextEdit', 'Tipo_de_Of': 'TextEdit', 'Fuente_Inf': 'TextEdit', });
-lyr_550millones1975millones_0.set('fieldLabels', {});
-lyr_360millones550millones_1.set('fieldLabels', {});
-lyr_300millones360millones_2.set('fieldLabels', {});
-lyr_250millones300millones_3.set('fieldLabels', {});
-lyr_195millones250millones_4.set('fieldLabels', {});
-lyr_160millones195millones_5.set('fieldLabels', {});
-lyr_130millones160millones_6.set('fieldLabels', {});
-lyr_102millones130millones_7.set('fieldLabels', {});
-lyr_60millones102millones_8.set('fieldLabels', {});
-lyr_60millones_9.set('fieldLabels', {});
-lyr_13millones75millones_10.set('fieldLabels', {});
-lyr_107millones13millones_11.set('fieldLabels', {});
-lyr_704mil107millones_12.set('fieldLabels', {});
-lyr_600mil704mil_13.set('fieldLabels', {});
-lyr_540mil600mil_14.set('fieldLabels', {});
-lyr_450mil540mil_15.set('fieldLabels', {});
-lyr_350mil450mil_16.set('fieldLabels', {});
-lyr_300mil350mil_17.set('fieldLabels', {});
-lyr_60mil300mil_18.set('fieldLabels', {});
-lyr_60mil_19.set('fieldLabels', {});
+
+lyr_550millones1975millones_0.set('fieldLabels', {'CODIGO': 'inline label', 'ÁREA_M2': 'inline label', 'O_Valor': 'inline label', 'O_Tipo_de_Of': 'inline label', });
+lyr_360millones550millones_1.set('fieldLabels', {'CODIGO': 'inline label', 'ÁREA_M2': 'inline label', 'O_Valor': 'inline label', 'O_Tipo_de_Of': 'inline label', });
+lyr_300millones360millones_2.set('fieldLabels', {'CODIGO': 'inline label', 'ÁREA_M2': 'inline label', 'O_Valor': 'inline label', 'O_Tipo_de_Of': 'inline label', });
+lyr_250millones300millones_3.set('fieldLabels', {'CODIGO': 'inline label', 'ÁREA_M2': 'inline label', 'O_Valor': 'inline label', 'O_Tipo_de_Of': 'inline label', });
+lyr_195millones250millones_4.set('fieldLabels', {'CODIGO': 'inline label', 'ÁREA_M2': 'inline label', 'O_Valor': 'inline label', 'O_Tipo_de_Of': 'inline label', });
+lyr_160millones195millones_5.set('fieldLabels', {'CODIGO': 'inline label', 'ÁREA_M2': 'inline label', 'O_Valor': 'inline label', 'O_Tipo_de_Of': 'inline label', });
+lyr_130millones160millones_6.set('fieldLabels', {'CODIGO': 'inline label', 'ÁREA_M2': 'inline label', 'O_Valor': 'inline label', 'O_Tipo_de_Of': 'inline label', });
+lyr_102millones130millones_7.set('fieldLabels', {'CODIGO': 'inline label', 'ÁREA_M2': 'inline label', 'O_Valor': 'inline label', 'O_Tipo_de_Of': 'inline label', });
+lyr_60millones102millones_8.set('fieldLabels', {'CODIGO': 'inline label', 'ÁREA_M2': 'inline label', 'O_Valor': 'inline label', 'O_Tipo_de_Of': 'inline label', });
+lyr_60millones_9.set('fieldLabels', {'CODIGO': 'inline label', 'ÁREA_M2': 'inline label', 'O_Valor': 'inline label', 'O_Tipo_de_Of': 'inline label', });
+lyr_13millones75millones_10.set('fieldLabels', {'CODIGO': 'inline label', 'ÁREA_M2': 'inline label', 'O_Valor': 'inline label', 'O_Tipo_de_Of': 'inline label', });
+lyr_107millones13millones_11.set('fieldLabels', {'CODIGO': 'inline label', 'ÁREA_M2': 'inline label', 'O_Valor': 'inline label', 'O_Tipo_de_Of': 'inline label', });
+lyr_704mil107millones_12.set('fieldLabels', {'CODIGO': 'inline label', 'ÁREA_M2': 'inline label', 'O_Valor': 'inline label', 'O_Tipo_de_Of': 'inline label', });
+lyr_600mil704mil_13.set('fieldLabels', {'CODIGO': 'inline label', 'ÁREA_M2': 'inline label', 'O_Valor': 'inline label', 'O_Tipo_de_Of': 'inline label', });
+lyr_540mil600mil_14.set('fieldLabels', {'CODIGO': 'inline label', 'ÁREA_M2': 'inline label', 'O_Valor': 'inline label', 'O_Tipo_de_Of': 'inline label', });
+lyr_450mil540mil_15.set('fieldLabels', {'CODIGO': 'inline label', 'ÁREA_M2': 'inline label', 'O_Valor': 'inline label', 'O_Tipo_de_Of': 'inline label', });
+lyr_350mil450mil_16.set('fieldLabels', {'CODIGO': 'inline label', 'ÁREA_M2': 'inline label', 'O_Valor': 'inline label', 'O_Tipo_de_Of': 'inline label', });
+lyr_300mil350mil_17.set('fieldLabels', {'CODIGO': 'inline label', 'ÁREA_M2': 'inline label', 'O_Valor': 'inline label', 'O_Tipo_de_Of': 'inline label', });
+lyr_60mil300mil_18.set('fieldLabels', {'CODIGO': 'inline label', 'ÁREA_M2': 'inline label', 'O_Valor': 'inline label', 'O_Tipo_de_Of': 'inline label', });
+lyr_60mil_19.set('fieldLabels', {'CODIGO': 'inline label', 'ÁREA_M2': 'inline label', 'O_Valor': 'inline label', 'O_Tipo_de_Of': 'inline label', });
 lyr_Perimetro_23.set('fieldLabels', {'NOMBRE_GEO': 'inline label', 'AREA_Ha': 'inline label', 'AREA_m²': 'inline label', });
-lyr_Manzana_24.set('fieldLabels', {'OBJECTID': 'header label', 'CODIGO': 'inline label', 'AREA_M2': 'inline label', });
+lyr_Manzana_24.set('fieldLabels', {'OBJECTID': 'inline label', 'CODIGO': 'inline label', 'AREA_M2': 'inline label', });
 lyr_Sector_25.set('fieldLabels', {'OBJECTID': 'no label', 'CODIGO': 'no label', 'USUARIO_LO': 'no label', 'FECHA_LOG': 'no label', 'GLOBALID': 'no label', 'GLOBALID_S': 'no label', 'CODIGO_MUN': 'no label', 'SHAPE_Leng': 'no label', 'SHAPE_Area': 'no label', });
 lyr_Terreno_26.set('fieldLabels', {'CODIGO': 'inline label', 'ÁREA_M2': 'inline label', });
 lyr_U_NOMENCLATRURA_VIAL_27.set('fieldLabels', {'OBJECTID': 'no label', 'TEXTO': 'no label', });
-lyr_Venta_28.set('fieldLabels', {'OBJECTID': 'header label', 'CODIGO': 'inline label', 'TERRENO_CO': 'inline label', 'TIPO_CONST': 'inline label', 'TIPO_DOMIN': 'inline label', 'NUMERO_PIS': 'inline label', 'NUMERO_SOT': 'inline label', 'NUMERO_MEZ': 'inline label', 'NUMERO_SEM': 'inline label', 'CODIGO_MUN': 'inline label', 'COOR_X': 'inline label', 'COOR_Y': 'inline label', 'RASTERVALU': 'inline label', 'Numero_de_': 'inline label', 'Numero_Pre': 'inline label', 'Barrio': 'inline label', 'Direccion': 'inline label', 'Telefono': 'inline label', 'Valor': 'inline label', 'Porcentaje': 'inline label', 'Valor_Depu': 'inline label', 'Fecha': 'inline label', 'Area_de_Te': 'inline label', 'Numero_d_1': 'inline label', 'Numero_d_2': 'inline label', 'Tipo_de_Co': 'inline label', 'Edad_del_I': 'inline label', 'Servicios_': 'inline label', 'Servicio_1': 'inline label', 'Servicio_2': 'inline label', 'Casa_Canti': 'inline label', 'Casa_Can_1': 'inline label', 'Apto_Canti': 'inline label', 'Apto_Numer': 'inline label', 'Apto_Tiene': 'inline label', 'Cantidad_d': 'inline label', 'Garaje_Can': 'inline label', 'Garaje_Tip': 'inline label', 'Garaje_T_1': 'inline label', 'Tipo_de_In': 'inline label', 'Tipo_de_Of': 'inline label', 'Fuente_Inf': 'inline label', });
-lyr_Arriendo_29.set('fieldLabels', {'OBJECTID': 'header label', 'CODIGO': 'inline label', 'TERRENO_CO': 'inline label', 'TIPO_CONST': 'inline label', 'TIPO_DOMIN': 'inline label', 'NUMERO_PIS': 'inline label', 'NUMERO_SOT': 'inline label', 'NUMERO_MEZ': 'inline label', 'NUMERO_SEM': 'inline label', 'CODIGO_MUN': 'inline label', 'COOR_X': 'inline label', 'COOR_Y': 'inline label', 'RASTERVALU': 'inline label', 'Numero_de_': 'inline label', 'Numero_Pre': 'inline label', 'Barrio': 'inline label', 'Direccion': 'inline label', 'Telefono': 'inline label', 'Valor': 'inline label', 'Porcentaje': 'inline label', 'Valor_Depu': 'inline label', 'Fecha': 'inline label', 'Area_de_Te': 'inline label', 'Numero_d_1': 'inline label', 'Numero_d_2': 'inline label', 'Tipo_de_Co': 'inline label', 'Edad_del_I': 'inline label', 'Servicios_': 'inline label', 'Servicio_1': 'inline label', 'Servicio_2': 'inline label', 'Casa_Canti': 'inline label', 'Casa_Can_1': 'inline label', 'Apto_Canti': 'inline label', 'Apto_Numer': 'inline label', 'Apto_Tiene': 'inline label', 'Cantidad_d': 'inline label', 'Garaje_Can': 'inline label', 'Garaje_Tip': 'inline label', 'Garaje_T_1': 'inline label', 'Tipo_de_In': 'inline label', 'Tipo_de_Of': 'inline label', 'Fuente_Inf': 'inline label', });
+lyr_Venta_28.set('fieldLabels', {'OBJECTID': 'inline label', 'CODIGO': 'inline label', 'TERRENO_CO': 'inline label', 'TIPO_CONST': 'inline label', 'TIPO_DOMIN': 'inline label', 'NUMERO_PIS': 'inline label', 'NUMERO_SOT': 'inline label', 'NUMERO_MEZ': 'inline label', 'NUMERO_SEM': 'inline label', 'CODIGO_MUN': 'inline label', 'COOR_X': 'inline label', 'COOR_Y': 'inline label', 'RASTERVALU': 'inline label', 'Numero_de_': 'inline label', 'Numero_Pre': 'inline label', 'Barrio': 'inline label', 'Direccion': 'inline label', 'Telefono': 'inline label', 'Valor': 'inline label', 'Porcentaje': 'inline label', 'Valor_Depu': 'inline label', 'Fecha': 'inline label', 'Area_de_Te': 'inline label', 'Numero_d_1': 'inline label', 'Numero_d_2': 'inline label', 'Tipo_de_Co': 'inline label', 'Edad_del_I': 'inline label', 'Servicios_': 'inline label', 'Servicio_1': 'inline label', 'Servicio_2': 'inline label', 'Casa_Canti': 'inline label', 'Casa_Can_1': 'inline label', 'Apto_Canti': 'inline label', 'Apto_Numer': 'inline label', 'Apto_Tiene': 'inline label', 'Cantidad_d': 'inline label', 'Garaje_Can': 'inline label', 'Garaje_Tip': 'inline label', 'Garaje_T_1': 'inline label', 'Tipo_de_In': 'inline label', 'Tipo_de_Of': 'inline label', 'Fuente_Inf': 'inline label', });
+lyr_Arriendo_29.set('fieldLabels', {'OBJECTID': 'inline label', 'CODIGO': 'inline label', 'TERRENO_CO': 'inline label', 'TIPO_CONST': 'inline label', 'TIPO_DOMIN': 'inline label', 'NUMERO_PIS': 'inline label', 'NUMERO_SOT': 'inline label', 'NUMERO_MEZ': 'inline label', 'NUMERO_SEM': 'inline label', 'CODIGO_MUN': 'inline label', 'COOR_X': 'inline label', 'COOR_Y': 'inline label', 'RASTERVALU': 'inline label', 'Numero_de_': 'inline label', 'Numero_Pre': 'inline label', 'Barrio': 'inline label', 'Direccion': 'inline label', 'Telefono': 'inline label', 'Valor': 'inline label', 'Porcentaje': 'inline label', 'Valor_Depu': 'inline label', 'Fecha': 'inline label', 'Area_de_Te': 'inline label', 'Numero_d_1': 'inline label', 'Numero_d_2': 'inline label', 'Tipo_de_Co': 'inline label', 'Edad_del_I': 'inline label', 'Servicios_': 'inline label', 'Servicio_1': 'inline label', 'Servicio_2': 'inline label', 'Casa_Canti': 'inline label', 'Casa_Can_1': 'inline label', 'Apto_Canti': 'inline label', 'Apto_Numer': 'inline label', 'Apto_Tiene': 'inline label', 'Cantidad_d': 'inline label', 'Garaje_Can': 'inline label', 'Garaje_Tip': 'inline label', 'Garaje_T_1': 'inline label', 'Tipo_de_In': 'inline label', 'Tipo_de_Of': 'inline label', 'Fuente_Inf': 'inline label', });
 lyr_Arriendo_29.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
