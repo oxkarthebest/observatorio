@@ -341,7 +341,7 @@ var lyr_Terreno_26 = new ol.layer.Vector({
     title: '<img src="styles/legend/Terreno_26.png" /> Terreno'
 });
 var format_U_NOMENCLATRURA_VIAL_27 = new ol.format.GeoJSON();
-var features_U_NOMENCLATRURA_VIAL_27 = format_U_NOMENCLATRURA_VIAL_27.readFeatures(json_U_NOMENCLATRURA_VIAL_27,
+var features_U_NOMENCLATRURA_VIAL_27 = format_U_NOMENCLATRURA_VIAL_27.readFeatures(json_U_NOMENCLATRURA_VIAL,
     { dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857' });
 var jsonSource_U_NOMENCLATRURA_VIAL_27 = new ol.source.Vector({
     attributions: ' ',
