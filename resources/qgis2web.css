@@ -7,16 +7,32 @@ body {
     font-size: small;
 }
 
+table {
+    width: 100%;
+    background-color:rgb(220, 220, 220);
+    border-radius: 7px;
+    border-collapse: none;
+ }
+
 td {
-    font-weight: 100;
+    width: 60%;
     vertical-align: center;
     text-align: left;
+    padding: 0.3em;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgb(125, 125, 125);
 }
 
 th {
+    width: 40%;
     font-weight: bold;
     vertical-align: center;
     text-align: left;
+    padding: 0.3em;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgb(125, 125, 125);
 }
 
 #map {
@@ -33,7 +49,7 @@ th {
 .ol-popup {
     display: none;
     position: absolute;
-    background-color: white;
+    background-color: rgb(230, 230, 230);
     -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
     -webkit-filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
     filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
@@ -96,21 +112,19 @@ th {
 #popup-content>ul>li:nth-child(even) {}
 
 #popup-content ul {
-    list-style-type: none;
     padding-left: 0;
-
 }
 
 #popup-content li {
     margin-bottom: 0.25em;
 }
 
-#map svg{
-    top: 1.5%;
-    left: 3%;
+#map svg {
+    top: .5em;
+    left: 40px;
     position: absolute;
     height: 50px;
-    width: 50px;
-    z-index: 1;
+    width: 30px;
+    z-index: 1;  
+}
 
-    }

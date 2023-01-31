@@ -2852,7 +2852,7 @@ th {
         vertical-align: top
     }
 
-    table.responsive-table th {
+    table.responsive-table 
         text-align: left
     }
 
