@@ -42,6 +42,7 @@ var measureControl = (function (Control) {
     measureControl.prototype.constructor = measureControl;
     return measureControl;
 }(ol.control.Control));
+
 var container = document.getElementById('popup');
 var content = document.getElementById('popup-content');
 var closer = document.getElementById('popup-closer');
@@ -63,8 +64,9 @@ var expandedAttribution = new ol.control.Attribution({
 var map = new ol.Map({
     controls: ol.control.defaults({ attribution: true }).extend([
         expandedAttribution, new ol.control.ScaleLine({
-            bar:true,
+            bar: true,
             text: true,
+            minWidth: 120,
         }), new measureControl(),
     ]),
     target: document.getElementById('map'),
@@ -379,7 +381,7 @@ var onSingleClick = function (evt) {
                     'INFO_FORMAT': 'text/html',
                 });
             if (url) {
-                popupText = popupText + '<iframe style="width:100%;height:110px;border:0px;" id="iframe" seamless src="' + url + '"></iframe>';
+                popupText = popupText + '<iframe style="width:100%; height:110px; border:0px;" id="iframe" seamless src="' + url + '"></iframe>';
             }
         }
     }
