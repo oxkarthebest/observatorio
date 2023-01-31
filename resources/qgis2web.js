@@ -2,39 +2,39 @@
 
 var measuring = false;
 var measureControl = (function (Control) {
-    measureControl = function(opt_options) {
+    measureControl = function (opt_options) {
 
-      var options = opt_options || {};
+        var options = opt_options || {};
 
-      var button = document.createElement('button');
-      button.className += ' fas fa-ruler ';
+        var button = document.createElement('button');
+        button.className += ' fas fa-ruler ';
 
-      var this_ = this;
-      var handleMeasure = function(e) {
-        if (!measuring) {
-            this_.getMap().addInteraction(draw);
-            createHelpTooltip();
-            createMeasureTooltip();
-            measuring = true;
-        } else {
-            this_.getMap().removeInteraction(draw);
-            measuring = false;
-            this_.getMap().removeOverlay(helpTooltip);
-            this_.getMap().removeOverlay(measureTooltip);
-        }
-      };
+        var this_ = this;
+        var handleMeasure = function (e) {
+            if (!measuring) {
+                this_.getMap().addInteraction(draw);
+                createHelpTooltip();
+                createMeasureTooltip();
+                measuring = true;
+            } else {
+                this_.getMap().removeInteraction(draw);
+                measuring = false;
+                this_.getMap().removeOverlay(helpTooltip);
+                this_.getMap().removeOverlay(measureTooltip);
+            }
+        };
 
-      button.addEventListener('click', handleMeasure, false);
-      button.addEventListener('touchstart', handleMeasure, false);
+        button.addEventListener('click', handleMeasure, false);
+        button.addEventListener('touchstart', handleMeasure, false);
 
-      var element = document.createElement('div');
-      element.className = 'measure-control ol-unselectable ol-control';
-      element.appendChild(button);
+        var element = document.createElement('div');
+        element.className = 'measure-control ol-unselectable ol-control';
+        element.appendChild(button);
 
-      ol.control.Control.call(this, {
-        element: element,
-        target: options.target
-      });
+        ol.control.Control.call(this, {
+            element: element,
+            target: options.target
+        });
 
     };
     if (Control) measureControl.__proto__ = Control;
@@ -47,7 +47,7 @@ var content = document.getElementById('popup-content');
 var closer = document.getElementById('popup-closer');
 var sketch;
 
-closer.onclick = function() {
+closer.onclick = function () {
     container.style.display = 'none';
     closer.blur();
     return false;
@@ -61,8 +61,11 @@ var expandedAttribution = new ol.control.Attribution({
 });
 
 var map = new ol.Map({
-    controls: ol.control.defaults({attribution:false}).extend([
-        expandedAttribution,new ol.control.ScaleLine({}),new measureControl()
+    controls: ol.control.defaults({ attribution: true }).extend([
+        expandedAttribution, new ol.control.ScaleLine({
+            bar:true,
+            text: true,
+        }), new measureControl(),
     ]),
     target: document.getElementById('map'),
     renderer: 'canvas',
@@ -73,7 +76,7 @@ var map = new ol.Map({
     })
 });
 
-var layerSwitcher = new ol.control.LayerSwitcher({tipLabel: "Layers"});
+var layerSwitcher = new ol.control.LayerSwitcher({ tipLabel: "Layers" });
 map.addControl(layerSwitcher);
 
 map.getView().fit([-8384223.045175, 324481.888609, -8373456.489746, 330059.898521], map.getSize());
@@ -120,8 +123,8 @@ var doHighlight = false;
 var doHover = false;
 
 var highlight;
-var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
-var onPointerMove = function(evt) {
+var autolinker = new Autolinker({ truncate: { length: 30, location: 'smart' } });
+var onPointerMove = function (evt) {
     if (!doHover && !doHighlight) {
         return;
     }
@@ -133,7 +136,7 @@ var onPointerMove = function(evt) {
     var currentFeatureKeys;
     var clusteredFeatures;
     var popupText = '<ul>';
-    map.forEachFeatureAtPixel(pixel, function(feature, layer) {
+    map.forEachFeatureAtPixel(pixel, function (feature, layer) {
         // We only care about features from layers in the layersList, ignore
         // any other layers which the map might contain such as the vector
         // layer used by the measure tool
@@ -152,15 +155,15 @@ var onPointerMove = function(evt) {
         var clusterFeature;
         if (typeof clusteredFeatures !== "undefined") {
             if (doPopup) {
-                for(var n=0; n<clusteredFeatures.length; n++) {
+                for (var n = 0; n < clusteredFeatures.length; n++) {
                     clusterFeature = clusteredFeatures[n];
                     currentFeatureKeys = clusterFeature.getKeys();
-                    popupText += 'aaaaaa<li><table>'
-                    for (var i=0; i<currentFeatureKeys.length; i++) {
+                    popupText += '<li><table>'
+                    for (var i = 0; i < currentFeatureKeys.length; i++) {
                         if (currentFeatureKeys[i] != 'geometry') {
                             popupField = '';
                             if (layer.get('fieldLabels')[currentFeatureKeys[i]] == "inline label") {
-                            popupField += '<th>' + layer.get('fieldAliases')[currentFeatureKeys[i]] + ':</th><td>';
+                                popupField += '<th>' + layer.get('fieldAliases')[currentFeatureKeys[i]] + ':</th><td>';
                             } else {
                                 popupField += '<td colspan="2">';
                             }
@@ -170,19 +173,19 @@ var onPointerMove = function(evt) {
                             if (layer.get('fieldImages')[currentFeatureKeys[i]] != "ExternalResource") {
                                 popupField += (clusterFeature.get(currentFeatureKeys[i]) != null ? autolinker.link(clusterFeature.get(currentFeatureKeys[i]).toLocaleString()) + '</td>' : '');
                             } else {
-                                popupField += (clusterFeature.get(currentFeatureKeys[i]) != null ? '<img src="images/' + clusterFeature.get(currentFeatureKeys[i]).replace(/[\\\/:]/g, '_').trim()  + '" /></td>' : '');
+                                popupField += (clusterFeature.get(currentFeatureKeys[i]) != null ? '<img src="images/' + clusterFeature.get(currentFeatureKeys[i]).replace(/[\\\/:]/g, '_').trim() + '" /></td>' : '');
                             }
                             popupText += '<tr>' + popupField + '</tr>';
                         }
-                    } 
-                    popupText += '</table></li>';    
+                    }
+                    popupText += '</table></li>';
                 }
             }
         } else {
             currentFeatureKeys = currentFeature.getKeys();
             if (doPopup) {
-                popupText += 'cccccc<li><table>';
-                for (var i=0; i<currentFeatureKeys.length; i++) {
+                popupText += '<li><table>';
+                for (var i = 0; i < currentFeatureKeys.length; i++) {
                     if (currentFeatureKeys[i] != 'geometry') {
                         popupField = '';
                         if (layer.get('fieldLabels')[currentFeatureKeys[i]] == "inline label") {
@@ -196,7 +199,7 @@ var onPointerMove = function(evt) {
                         if (layer.get('fieldImages')[currentFeatureKeys[i]] != "ExternalResource") {
                             popupField += (currentFeature.get(currentFeatureKeys[i]) != null ? autolinker.link(currentFeature.get(currentFeatureKeys[i]).toLocaleString()) + '</td>' : '');
                         } else {
-                            popupField += (currentFeature.get(currentFeatureKeys[i]) != null ? '<img src="images/' + currentFeature.get(currentFeatureKeys[i]).replace(/[\\\/:]/g, '_').trim()  + '" /></td>' : '');
+                            popupField += (currentFeature.get(currentFeatureKeys[i]) != null ? '<img src="images/' + currentFeature.get(currentFeatureKeys[i]).replace(/[\\\/:]/g, '_').trim() + '" /></td>' : '');
                         }
                         popupText += '<tr>' + popupField + '</tr>';
                     }
@@ -232,7 +235,7 @@ var onPointerMove = function(evt) {
                     })
                 } else if (currentFeature.getGeometry().getType() == 'LineString') {
 
-                    var featureWidth = styleDefinition.split('width')[1].split(' ')[1].replace('})','');
+                    var featureWidth = styleDefinition.split('width')[1].split(' ')[1].replace('})', '');
 
                     highlightStyle = new ol.style.Style({
                         stroke: new ol.style.Stroke({
@@ -260,7 +263,7 @@ var onPointerMove = function(evt) {
         if (popupText) {
             overlayPopup.setPosition(coord);
             content.innerHTML = popupText;
-            container.style.display = 'block';        
+            container.style.display = 'block';
         } else {
             container.style.display = 'none';
             closer.blur();
@@ -268,7 +271,7 @@ var onPointerMove = function(evt) {
     }
 };
 
-var onSingleClick = function(evt) {
+var onSingleClick = function (evt) {
     if (doHover) {
         return;
     }
@@ -282,7 +285,7 @@ var onSingleClick = function(evt) {
     var currentFeatureKeys;
     var clusteredFeatures;
     var popupText = '<ul>';
-    map.forEachFeatureAtPixel(pixel, function(feature, layer) {
+    map.forEachFeatureAtPixel(pixel, function (feature, layer) {
         if (feature instanceof ol.Feature && (layer.get("interactive") || layer.get("interactive") == undefined)) {
             var doPopup = false;
             for (k in layer.get('fieldImages')) {
@@ -295,15 +298,15 @@ var onSingleClick = function(evt) {
             var clusterFeature;
             if (typeof clusteredFeatures !== "undefined") {
                 if (doPopup) {
-                    for(var n=0; n<clusteredFeatures.length; n++) {
+                    for (var n = 0; n < clusteredFeatures.length; n++) {
                         clusterFeature = clusteredFeatures[n];
                         currentFeatureKeys = clusterFeature.getKeys();
                         popupText += 'bbbbbb<li><table>'
-                        for (var i=0; i<currentFeatureKeys.length; i++) {
+                        for (var i = 0; i < currentFeatureKeys.length; i++) {
                             if (currentFeatureKeys[i] != 'geometry') {
                                 popupField = '';
                                 if (layer.get('fieldLabels')[currentFeatureKeys[i]] == "inline label") {
-                                popupField += '<th>' + layer.get('fieldAliases')[currentFeatureKeys[i]] + ':</th><td>';
+                                    popupField += '<th>' + layer.get('fieldAliases')[currentFeatureKeys[i]] + ':</th><td>';
                                 } else {
                                     popupField += '<td colspan="2">';
                                 }
@@ -313,24 +316,24 @@ var onSingleClick = function(evt) {
                                 if (layer.get('fieldImages')[currentFeatureKeys[i]] != "ExternalResource") {
                                     popupField += (clusterFeature.get(currentFeatureKeys[i]) != null ? autolinker.link(clusterFeature.get(currentFeatureKeys[i]).toLocaleString()) + '</td>' : '');
                                 } else {
-                                    popupField += (clusterFeature.get(currentFeatureKeys[i]) != null ? '<img src="images/' + clusterFeature.get(currentFeatureKeys[i]).replace(/[\\\/:]/g, '_').trim()  + '" /></td>' : '');
+                                    popupField += (clusterFeature.get(currentFeatureKeys[i]) != null ? '<img src="images/' + clusterFeature.get(currentFeatureKeys[i]).replace(/[\\\/:]/g, '_').trim() + '" /></td>' : '');
                                 }
                                 popupText += '<tr>' + popupField + '</tr>';
                             }
-                        } 
-                        popupText += '</table></li>';    
+                        }
+                        popupText += '</table></li>';
                     }
                 }
             } else {
                 currentFeatureKeys = currentFeature.getKeys();
                 if (doPopup) {
-                    if(layer.values_.name === undefined){
+                    if (layer.values_.name === undefined) {
                         popupText += '<li><table>'
                     } else {
-                        popupText += '<h1 id="title-popup" class="title-popup">' + layer.values_.name + '<li><table>'
+                        popupText += '<h1 id="title-popup" class="title-popup">' + layer.values_.name + '</h1><li><table>'
                     }
                     popupText += '<li><table>';
-                    for (var i=0; i<currentFeatureKeys.length; i++) {
+                    for (var i = 0; i < currentFeatureKeys.length; i++) {
                         if (currentFeatureKeys[i] != 'geometry') {
                             popupField = '';
                             if (layer.get('fieldLabels')[currentFeatureKeys[i]] == "inline label") {
@@ -342,20 +345,20 @@ var onSingleClick = function(evt) {
                                 popupField += '<strong>' + layer.get('fieldAliases')[currentFeatureKeys[i]] + ':</strong><br />';
                             }
                             if (layer.get('fieldImages')[currentFeatureKeys[i]] != "ExternalResource") {
-                                if(currentFeatureKeys[i] === 'TELEFONO_F'){
+                                if (currentFeatureKeys[i] === 'TELEFONO_F') {
                                     //replace last 4 digits with *
                                     var phone = currentFeature.get(currentFeatureKeys[i]);
                                     popupField += (currentFeature.get(currentFeatureKeys[i]) != null ? autolinker.link(phone.replace(phone.substr(phone.length - 4), '****').toLocaleString()) + '</td>' : '');
-                                }else{
+                                } else {
                                     popupField += (currentFeature.get(currentFeatureKeys[i]) != null ? autolinker.link(currentFeature.get(currentFeatureKeys[i]).toLocaleString()) + '</td>' : '');
-                                }                              
+                                }
                             } else {
-                                popupField += (currentFeature.get(currentFeatureKeys[i]) != null ? '<img src="images/' + currentFeature.get(currentFeatureKeys[i]).replace(/[\\\/:]/g, '_').trim()  + '" /></td>' : '');
+                                popupField += (currentFeature.get(currentFeatureKeys[i]) != null ? '<img src="images/' + currentFeature.get(currentFeatureKeys[i]).replace(/[\\\/:]/g, '_').trim() + '" /></td>' : '');
                             }
                             popupText += '<tr>' + popupField + '</tr>';
                         }
                     }
-                    popupText += '</table>';
+                    popupText += '</table></li>';
                 }
             }
         }
@@ -365,7 +368,7 @@ var onSingleClick = function(evt) {
     } else {
         popupText += '</ul>';
     }
-    
+
     var viewProjection = map.getView().getProjection();
     var viewResolution = map.getView().getResolution();
     for (i = 0; i < wms_layers.length; i++) {
@@ -383,9 +386,9 @@ var onSingleClick = function(evt) {
 
     if (popupText) {
         overlayPopup.setPosition(coord);
-        map.getView().animate({center:coord,duration:700});
+        map.getView().animate({ center: coord, duration: 700 });
         content.innerHTML = popupText;
-        container.style.display = 'block';        
+        container.style.display = 'block';
     } else {
         container.style.display = 'none';
         closer.blur();
@@ -393,31 +396,31 @@ var onSingleClick = function(evt) {
 };
 
 
-    map.on('pointermove', function(evt) {
-        if (evt.dragging) {
-            return;
-        }
-        if (measuring) {
-            /** @type {string} */
-            var helpMsg = 'Click to start drawing';
-            if (sketch) {
-                var geom = (sketch.getGeometry());
-                if (geom instanceof ol.geom.Polygon) {
-                    helpMsg = continuePolygonMsg;
-                } else if (geom instanceof ol.geom.LineString) {
-                    helpMsg = continueLineMsg;
-                }
+map.on('pointermove', function (evt) {
+    if (evt.dragging) {
+        return;
+    }
+    if (measuring) {
+        /** @type {string} */
+        var helpMsg = 'Click to start drawing';
+        if (sketch) {
+            var geom = (sketch.getGeometry());
+            if (geom instanceof ol.geom.Polygon) {
+                helpMsg = continuePolygonMsg;
+            } else if (geom instanceof ol.geom.LineString) {
+                helpMsg = continueLineMsg;
             }
-            helpTooltipElement.innerHTML = helpMsg;
-            helpTooltip.setPosition(evt.coordinate);
         }
-    });
-    
+        helpTooltipElement.innerHTML = helpMsg;
+        helpTooltip.setPosition(evt.coordinate);
+    }
+});
 
-map.on('pointermove', function(evt) {
+
+map.on('pointermove', function (evt) {
     onPointerMove(evt);
 });
-map.on('singleclick', function(evt) {
+map.on('singleclick', function (evt) {
     onSingleClick(evt);
 });
 
@@ -490,61 +493,61 @@ map.addLayer(measureLayer);
 
 var draw; // global so we can remove it later
 function addInteraction() {
-  var type = 'LineString';
-  draw = new ol.interaction.Draw({
-    source: source,
-    type: /** @type {ol.geom.GeometryType} */ (type),
-    style: new ol.style.Style({
-      fill: new ol.style.Fill({
-        color: 'rgba(255, 255, 255, 0.2)'
-      }),
-      stroke: new ol.style.Stroke({
-        color: 'rgba(0, 0, 0, 0.5)',
-        lineDash: [10, 10],
-        width: 2
-      }),
-      image: new ol.style.Circle({
-        radius: 5,
-        stroke: new ol.style.Stroke({
-          color: 'rgba(0, 0, 0, 0.7)'
-        }),
-        fill: new ol.style.Fill({
-          color: 'rgba(255, 255, 255, 0.2)'
+    var type = 'LineString';
+    draw = new ol.interaction.Draw({
+        source: source,
+        type: /** @type {ol.geom.GeometryType} */ (type),
+        style: new ol.style.Style({
+            fill: new ol.style.Fill({
+                color: 'rgba(255, 255, 255, 0.2)'
+            }),
+            stroke: new ol.style.Stroke({
+                color: 'rgba(0, 0, 0, 0.5)',
+                lineDash: [10, 10],
+                width: 2
+            }),
+            image: new ol.style.Circle({
+                radius: 5,
+                stroke: new ol.style.Stroke({
+                    color: 'rgba(0, 0, 0, 0.7)'
+                }),
+                fill: new ol.style.Fill({
+                    color: 'rgba(255, 255, 255, 0.2)'
+                })
+            })
         })
-      })
-    })
-  });
+    });
 
-  var listener;
-  draw.on('drawstart',
-      function(evt) {
-        // set sketch
-        sketch = evt.feature;
+    var listener;
+    draw.on('drawstart',
+        function (evt) {
+            // set sketch
+            sketch = evt.feature;
 
-        /** @type {ol.Coordinate|undefined} */
-        var tooltipCoord = evt.coordinate;
+            /** @type {ol.Coordinate|undefined} */
+            var tooltipCoord = evt.coordinate;
 
-        listener = sketch.getGeometry().on('change', function(evt) {
-          var geom = evt.target;
-          var output;
-            output = formatLength( /** @type {ol.geom.LineString} */ (geom));
-            tooltipCoord = geom.getLastCoordinate();
-          measureTooltipElement.innerHTML = output;
-          measureTooltip.setPosition(tooltipCoord);
-        });
-      }, this);
+            listener = sketch.getGeometry().on('change', function (evt) {
+                var geom = evt.target;
+                var output;
+                output = formatLength( /** @type {ol.geom.LineString} */(geom));
+                tooltipCoord = geom.getLastCoordinate();
+                measureTooltipElement.innerHTML = output;
+                measureTooltip.setPosition(tooltipCoord);
+            });
+        }, this);
 
-  draw.on('drawend',
-      function(evt) {
-        measureTooltipElement.className = 'tooltip tooltip-static';
-        measureTooltip.setOffset([0, -7]);
-        // unset sketch
-        sketch = null;
-        // unset tooltip so that a new one can be created
-        measureTooltipElement = null;
-        createMeasureTooltip();
-        ol.Observable.unByKey(listener);
-      }, this);
+    draw.on('drawend',
+        function (evt) {
+            measureTooltipElement.className = 'tooltip tooltip-static';
+            measureTooltip.setOffset([0, -7]);
+            // unset sketch
+            sketch = null;
+            // unset tooltip so that a new one can be created
+            measureTooltipElement = null;
+            createMeasureTooltip();
+            ol.Observable.unByKey(listener);
+        }, this);
 }
 
 
@@ -552,17 +555,17 @@ function addInteraction() {
  * Creates a new help tooltip
  */
 function createHelpTooltip() {
-  if (helpTooltipElement) {
-    helpTooltipElement.parentNode.removeChild(helpTooltipElement);
-  }
-  helpTooltipElement = document.createElement('div');
-  helpTooltipElement.className = 'tooltip hidden';
-  helpTooltip = new ol.Overlay({
-    element: helpTooltipElement,
-    offset: [15, 0],
-    positioning: 'center-left'
-  });
-  map.addOverlay(helpTooltip);
+    if (helpTooltipElement) {
+        helpTooltipElement.parentNode.removeChild(helpTooltipElement);
+    }
+    helpTooltipElement = document.createElement('div');
+    helpTooltipElement.className = 'tooltip hidden';
+    helpTooltip = new ol.Overlay({
+        element: helpTooltipElement,
+        offset: [15, 0],
+        positioning: 'center-left'
+    });
+    map.addOverlay(helpTooltip);
 }
 
 
@@ -570,17 +573,17 @@ function createHelpTooltip() {
  * Creates a new measure tooltip
  */
 function createMeasureTooltip() {
-  if (measureTooltipElement) {
-    measureTooltipElement.parentNode.removeChild(measureTooltipElement);
-  }
-  measureTooltipElement = document.createElement('div');
-  measureTooltipElement.className = 'tooltip tooltip-measure';
-  measureTooltip = new ol.Overlay({
-    element: measureTooltipElement,
-    offset: [0, -15],
-    positioning: 'bottom-center'
-  });
-  map.addOverlay(measureTooltip);
+    if (measureTooltipElement) {
+        measureTooltipElement.parentNode.removeChild(measureTooltipElement);
+    }
+    measureTooltipElement = document.createElement('div');
+    measureTooltipElement.className = 'tooltip tooltip-measure';
+    measureTooltip = new ol.Overlay({
+        element: measureTooltipElement,
+        offset: [0, -15],
+        positioning: 'bottom-center'
+    });
+    map.addOverlay(measureTooltip);
 }
 
 
@@ -590,25 +593,25 @@ function createMeasureTooltip() {
  * @param {ol.geom.LineString} line
  * @return {string}
  */
-var formatLength = function(line) {
-  var length;
-  var coordinates = line.getCoordinates();
-  length = 0;
-  var sourceProj = map.getView().getProjection();
-  for (var i = 0, ii = coordinates.length - 1; i < ii; ++i) {
-      var c1 = ol.proj.transform(coordinates[i], sourceProj, 'EPSG:4326');
-      var c2 = ol.proj.transform(coordinates[i + 1], sourceProj, 'EPSG:4326');
-      length += ol.sphere.getDistance(c1, c2);
+var formatLength = function (line) {
+    var length;
+    var coordinates = line.getCoordinates();
+    length = 0;
+    var sourceProj = map.getView().getProjection();
+    for (var i = 0, ii = coordinates.length - 1; i < ii; ++i) {
+        var c1 = ol.proj.transform(coordinates[i], sourceProj, 'EPSG:4326');
+        var c2 = ol.proj.transform(coordinates[i + 1], sourceProj, 'EPSG:4326');
+        length += ol.sphere.getDistance(c1, c2);
     }
-  var output;
-  if (length > 100) {
-    output = (Math.round(length / 1000 * 100) / 100) +
-        ' ' + 'km';
-  } else {
-    output = (Math.round(length * 100) / 100) +
-        ' ' + 'm';
-  }
-  return output;
+    var output;
+    if (length > 100) {
+        output = (Math.round(length / 1000 * 100) / 100) +
+            ' ' + 'km';
+    } else {
+        output = (Math.round(length * 100) / 100) +
+            ' ' + 'm';
+    }
+    return output;
 };
 
 addInteraction();
@@ -616,7 +619,7 @@ addInteraction();
 
 
 var attributionComplete = false;
-map.on("rendercomplete", function(evt) {
+map.on("rendercomplete", function (evt) {
     if (!attributionComplete) {
         var attribution = document.getElementsByClassName('ol-attribution')[0];
         var attributionList = attribution.getElementsByTagName('ul')[0];

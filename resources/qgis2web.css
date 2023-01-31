@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     height: 100%;
     padding: 0;
     margin: 0;
@@ -6,13 +7,16 @@ html, body {
     font-size: small;
 }
 
-th, td {
+td {
     font-weight: 100;
     vertical-align: center;
     text-align: left;
 }
+
 th {
     font-weight: bold;
+    vertical-align: center;
+    text-align: left;
 }
 
 #map {
@@ -23,24 +27,24 @@ th {
 .title-popup {
     width: 100%;
     text-align: center;
-    font-size: small;
+    font-size: medium;
 }
 
 .ol-popup {
     display: none;
     position: absolute;
     background-color: white;
-    -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-    -webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
-    filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    -webkit-filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
     padding: 10px;
     border-radius: 10px;
-    border: 1px solid #cccccc;   
+    border: 1px solid rgb(125, 125, 125);
     height: auto;
     width: auto;
-    min-width: 100px;
-    max-height:300px;
-    overflow: auto;      
+    min-width: 150px;
+    max-height: 300px;
+    overflow: auto;
 }
 
 .ol-popup::-webkit-scrollbar {
@@ -79,6 +83,8 @@ th {
 }
 
 .layer-switcher .panel {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgb(125, 125, 125);
 }
 
 .layer-switcher {
@@ -87,15 +93,24 @@ th {
     text-align: left;
 }
 
-#popup-content>ul>li:nth-child(even) {
-    
-}
+#popup-content>ul>li:nth-child(even) {}
 
 #popup-content ul {
     list-style-type: none;
     padding-left: 0;
+
 }
 
 #popup-content li {
-    margin-bottom:0.25em;
+    margin-bottom: 0.25em;
 }
+
+#map svg{
+    top: 1.5%;
+    left: 3%;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    z-index: 1;
+
+    }

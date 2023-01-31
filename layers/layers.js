@@ -241,6 +241,7 @@ var lyr_PUNTOS_DE_INTERES_URBANIZACIONES_APARTAMENTO_15 = new ol.layer.Vector({
 });
 
 
+
 var lyr_NoMap_20 = new ol.layer.Tile({
     'title': 'No Map',
     'type': 'base',
@@ -276,6 +277,7 @@ var lyr_CartoDbPositron_22 = new ol.layer.Tile({
         url: 'http://basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png'
     })
 });
+
 var format_Perimetro_23 = new ol.format.GeoJSON();
 var features_Perimetro_23 = format_Perimetro_23.readFeatures(json_U_PERIMETRO,
     { dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857' });
@@ -288,7 +290,7 @@ var lyr_Perimetro_23 = new ol.layer.Vector({
     source: jsonSource_Perimetro_23,
     style: style_Perimetro_23,
     interactive: true,
-    name: 'Perimetro',
+    name: 'Perimetro Urbano',
     title: '<img src="styles/legend/Perimetro_23.png" /> Perimetro'
 });
 var format_Manzana_24 = new ol.format.GeoJSON();
@@ -305,7 +307,7 @@ var lyr_Manzana_24 = new ol.layer.Vector({
 
     style: style_Manzana_24,
     interactive: true,
-    name: 'Manzana',
+    name: 'Manzana Urbana',
     title: '<img src="styles/legend/Manzana_24.png" /> Manzana'
 });
 var format_Sector_25 = new ol.format.GeoJSON();
@@ -320,7 +322,7 @@ var lyr_Sector_25 = new ol.layer.Vector({
     source: jsonSource_Sector_25,
     style: style_Sector_25,
     interactive: false,
-    name: 'Sector',
+    name: 'Sector Urbano',
     title: '<img src="styles/legend/SECTOR.png" /> Sector'
 });
 var format_Terreno_26 = new ol.format.GeoJSON();
@@ -337,7 +339,7 @@ var lyr_Terreno_26 = new ol.layer.Vector({
 
     style: style_Terreno_26,
     interactive: true,
-    name: 'Terreno',
+    name: 'Terreno Urbano',
     title: '<img src="styles/legend/Terreno_26.png" /> Terreno'
 });
 var format_U_NOMENCLATRURA_VIAL_27 = new ol.format.GeoJSON();
@@ -402,7 +404,7 @@ lyr_PUNTOS_DE_INTERES_URBANIZACIONES_APARTAMENTO_15.set('fieldAliases', {'OBJECT
 lyr_Perimetro_23.set('fieldAliases', { 'NOMBRE_GEO': 'Nombre', 'AREA_Ha': 'Área Ha', 'AREA_m²': 'Área m²', });
 lyr_Manzana_24.set('fieldAliases', { 'OBJECTID': 'Identificador', 'CODIGO': 'Codigo', 'AREA_M2': 'Área m²', });
 lyr_Sector_25.set('fieldAliases', { 'OBJECTID': 'OBJECTID', 'CODIGO': 'CODIGO', 'USUARIO_LO': 'USUARIO_LO', 'FECHA_LOG': 'FECHA_LOG', 'GLOBALID': 'GLOBALID', 'GLOBALID_S': 'GLOBALID_S', 'CODIGO_MUN': 'CODIGO_MUN', 'SHAPE_Leng': 'SHAPE_Leng', 'SHAPE_Area': 'SHAPE_Area', });
-lyr_Terreno_26.set('fieldAliases', {'t_ili_tid': 't_ili_tid', 'area_terre': 'Área de Terreno m²', 'avaluo_ter': 'Avaluo de Terreno', 'manzana_ve': 'Numero de Manzana', 'dimension': 'Dimension', 'etiqueta': 'Etiqueta', 'relacion_s': 'relacion_s', 'comienzo_v': 'Comienzo Vida Util', 'fin_vida_u': 'Fin Vida Util', 'espacio_de': 'Espacio de', 'local_id': 'Id Local', 'npn': 'npn', });
+lyr_Terreno_26.set('fieldAliases', {'t_ili_tid': 't_ili_tid', 'area_terre': 'Área m²', 'avaluo_ter': 'Avaluo de Terreno', 'manzana_ve': 'Numero de Manzana', 'dimension': 'Dimension', 'etiqueta': 'Etiqueta', 'relacion_s': 'relacion_s', 'comienzo_v': 'Comienzo Vida Util', 'fin_vida_u': 'Fin Vida Util', 'espacio_de': 'Espacio de', 'local_id': 'Id Local', 'npn': 'npn', });
 lyr_U_NOMENCLATRURA_VIAL_27.set('fieldAliases', { 'OBJECTID': 'OBJECTID', 'TEXTO': 'TEXTO', });
 
 lyr_ARRIENDOLOTE_0.set('fieldImages', { 'NPN': 'TextEdit', 'TIPO_CONST': 'TextEdit', 'NUMERO_PIS': 'Range', 'NUMERO_SOT': 'Range', 'TIPO_DOMIN': 'TextEdit', 'NUMERO_MEZ': 'Range', 'NUMERO_SEM': 'Range', 'COOR_X_F': 'TextEdit', 'COOR_Y_F': 'TextEdit', 'RASTERVALU': 'TextEdit', 'NUM_OFERTA': 'Range', 'BARRIO': 'TextEdit', 'TELEFONO_F': 'TextEdit', 'VALOR_F': 'Range', 'PORCENTAJE': 'TextEdit', 'VALOR_DEPU': 'Range', 'FECHA_F': 'TextEdit', 'NUMERO_D_1': 'Range', 'NUMERO_D_2': 'Range', 'TIPO_DE_CO': 'TextEdit', 'EDAD_DEL_L': 'Range', 'SERVICIOS_': 'TextEdit', 'SERVICIO_1': 'TextEdit', 'SERVICIO_2': 'TextEdit', 'CASA_CANTI': 'Range', 'CASA_CAN_1': 'Range', 'APTO_CANTI': 'TextEdit', 'APTO_NUMER': 'TextEdit', 'APTO_TIENE': 'TextEdit', 'GARAJE_TIP': 'TextEdit', 'GARAJE_T_1': 'TextEdit', 'CANTIDAD_D': 'TextEdit', 'TIPO_DE_IN': 'TextEdit', 'TIPO_DE_OF': 'TextEdit', 'FUENTE_INF': 'TextEdit', 'GARAJE_CAN': 'TextEdit', 'DIRECCION': 'TextEdit', 'AT_M2': 'Range', });
