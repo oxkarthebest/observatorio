@@ -277,7 +277,7 @@ var lyr_CartoDbPositron_22 = new ol.layer.Tile({
     })
 });
 var format_Perimetro_23 = new ol.format.GeoJSON();
-var features_Perimetro_23 = format_Perimetro_23.readFeatures(json_Perimetro_23,
+var features_Perimetro_23 = format_Perimetro_23.readFeatures(json_U_PERIMETRO,
     { dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857' });
 var jsonSource_Perimetro_23 = new ol.source.Vector({
     attributions: ' ',
@@ -292,7 +292,7 @@ var lyr_Perimetro_23 = new ol.layer.Vector({
     title: '<img src="styles/legend/Perimetro_23.png" /> Perimetro'
 });
 var format_Manzana_24 = new ol.format.GeoJSON();
-var features_Manzana_24 = format_Manzana_24.readFeatures(json_Manzana_24,
+var features_Manzana_24 = format_Manzana_24.readFeatures(json_U_MANZANA,
     { dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857' });
 var jsonSource_Manzana_24 = new ol.source.Vector({
     attributions: ' ',
@@ -309,7 +309,7 @@ var lyr_Manzana_24 = new ol.layer.Vector({
     title: '<img src="styles/legend/Manzana_24.png" /> Manzana'
 });
 var format_Sector_25 = new ol.format.GeoJSON();
-var features_Sector_25 = format_Sector_25.readFeatures(json_Sector_25,
+var features_Sector_25 = format_Sector_25.readFeatures(json_U_SECTOR,
     { dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857' });
 var jsonSource_Sector_25 = new ol.source.Vector({
     attributions: ' ',
@@ -324,7 +324,7 @@ var lyr_Sector_25 = new ol.layer.Vector({
     title: '<img src="styles/legend/SECTOR.png" /> Sector'
 });
 var format_Terreno_26 = new ol.format.GeoJSON();
-var features_Terreno_26 = format_Terreno_26.readFeatures(json_Terreno_26,
+var features_Terreno_26 = format_Terreno_26.readFeatures(json_U_LC_TERRENO,
     { dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857' });
 var jsonSource_Terreno_26 = new ol.source.Vector({
     attributions: ' ',
@@ -374,13 +374,13 @@ var group_Arriendo = new ol.layer.Group({
 });
 
 
-lyr_ARRIENDOLOTE_0.setVisible(true); lyr_ARRIENDOLOCAL_1.setVisible(true); lyr_ARRIENDOHABITACION_2.setVisible(true); lyr_ARRIENDOCASA_3.setVisible(true); lyr_ARRIENDOBODEGA_4.setVisible(true); lyr_ARRIENDOAPTO_5.setVisible(true); lyr_VENTALOTE_6.setVisible(true); lyr_VENTALOCAL_7.setVisible(true); lyr_VENTAHABITACION_8.setVisible(true); lyr_VENTACASA_9.setVisible(true); lyr_VENTABODEGA_10.setVisible(true); lyr_VENTAAPTO_11.setVisible(true); lyr_PUNTOS_DE_INTERES_URBANIZACIONES_LOTE_12.setVisible(true); lyr_PUNTOS_DE_INTERES_URBANIZACIONES_CONDOMINIO_13.setVisible(true); lyr_PUNTOS_DE_INTERES_URBANIZACIONES_CASA_14.setVisible(true); lyr_PUNTOS_DE_INTERES_URBANIZACIONES_APARTAMENTO_15.setVisible(true); lyr_NoMap_20.setVisible(false); lyr_OpenStreetMap.setVisible(false); lyr_CartoDbPositron_22.setVisible(true); lyr_Perimetro_23.setVisible(true); lyr_Manzana_24.setVisible(true); lyr_Sector_25.setVisible(true); lyr_Terreno_26.setVisible(true); lyr_U_NOMENCLATRURA_VIAL_27.setVisible(true);
+lyr_ARRIENDOLOTE_0.setVisible(true); lyr_ARRIENDOLOCAL_1.setVisible(true); lyr_ARRIENDOHABITACION_2.setVisible(true); lyr_ARRIENDOCASA_3.setVisible(true); lyr_ARRIENDOBODEGA_4.setVisible(true); lyr_ARRIENDOAPTO_5.setVisible(true); lyr_VENTALOTE_6.setVisible(true); lyr_VENTALOCAL_7.setVisible(true); lyr_VENTAHABITACION_8.setVisible(true); lyr_VENTACASA_9.setVisible(true); lyr_VENTABODEGA_10.setVisible(true); lyr_VENTAAPTO_11.setVisible(true); lyr_PUNTOS_DE_INTERES_URBANIZACIONES_LOTE_12.setVisible(true); lyr_PUNTOS_DE_INTERES_URBANIZACIONES_CONDOMINIO_13.setVisible(true); lyr_PUNTOS_DE_INTERES_URBANIZACIONES_CASA_14.setVisible(true); lyr_PUNTOS_DE_INTERES_URBANIZACIONES_APARTAMENTO_15.setVisible(true); lyr_NoMap_20.setVisible(false); lyr_OpenStreetMap.setVisible(true); lyr_CartoDbPositron_22.setVisible(false); lyr_Perimetro_23.setVisible(true); lyr_Manzana_24.setVisible(true); lyr_Sector_25.setVisible(true); lyr_Terreno_26.setVisible(true); lyr_U_NOMENCLATRURA_VIAL_27.setVisible(true);
 var layersList = [
     new ol.layer.Group({
         title: 'Mapas Base',
         fold: 'close',
         layers: [
-            lyr_NoMap_20, lyr_OpenStreetMap, lyr_CartoDbPositron_22,]
+            lyr_NoMap_20, lyr_CartoDbPositron_22, lyr_OpenStreetMap,]
     }), lyr_Perimetro_23, lyr_Sector_25, lyr_Manzana_24, lyr_Terreno_26, lyr_U_NOMENCLATRURA_VIAL_27, group_PuntosdeInteres, group_Arriendo, group_Venta];
 
 lyr_ARRIENDOLOTE_0.set('fieldAliases', { 'NPN': 'NPN', 'TIPO_CONST': 'Tipo de Construcción', 'NUMERO_PIS': 'Numero de Pisos', 'NUMERO_SOT': 'Numero de Sotanos', 'TIPO_DOMIN': 'Tipo de Domicilio', 'NUMERO_MEZ': 'NUMERO_MEZ', 'NUMERO_SEM': 'NUMERO_SEM', 'COOR_X_F': 'Coordenada X', 'COOR_Y_F': 'Coordenada Y', 'RASTERVALU': 'Rastervalu', 'NUM_OFERTA': 'Numero de Oferta', 'BARRIO': 'Barrio', 'TELEFONO_F': 'Telefono', 'VALOR_F': 'Valor', 'PORCENTAJE': '%', 'VALOR_DEPU': 'Valor Depurado', 'FECHA_F': 'Fecha de Oferta', 'NUMERO_D_1': 'Numero de Habitaciones', 'NUMERO_D_2': 'Numero de Baños', 'TIPO_DE_CO': 'Tipo de Cocina',  'EDAD_DEL_L': 'Edad del Inmueble', 'SERVICIOS_': 'Servicio de Agua', 'SERVICIO_1': 'Servicio de Luz', 'SERVICIO_2': 'Servicio de Gas',  'CASA_CANTI': 'Numero de Pisos', 'CASA_CAN_1': 'Numero de Patios', 'APTO_CANTI': 'Numero de Apartamentos', 'APTO_NUMER': 'Numero de Apartamento', 'APTO_TIENE': 'Tiene Ascensor?', 'GARAJE_TIP': 'Garaje Caracteristica 1', 'GARAJE_T_1': 'Garaje Caracteristica 2', 'CANTIDAD_D': 'Numero de Depositos', 'TIPO_DE_IN': 'Tipo de Inmueble', 'TIPO_DE_OF': 'Tipo de Oferta', 'FUENTE_INF': 'Fuente de Información', 'GARAJE_CAN': 'Numero de Garajes', 'DIRECCION': 'Dirección', 'AT_M2': 'Área de Terreno m²', });
