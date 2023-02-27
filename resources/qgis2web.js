@@ -66,7 +66,7 @@ var map = new ol.Map({
         expandedAttribution, new ol.control.ScaleLine({
             bar: true,
             text: true,
-            minWidth: 120,
+            minWidth: 80,
         }), new measureControl(),
     ]),
     target: document.getElementById('map'),
@@ -390,6 +390,7 @@ var onSingleClick = function (evt) {
         overlayPopup.setPosition(coord);
         map.getView().animate({ center: coord, duration: 700 });
         content.innerHTML = popupText;
+        /* document.getElementById("popbox").innerHTML = popupText; */
         container.style.display = 'block';
     } else {
         container.style.display = 'none';

@@ -380,7 +380,7 @@ lyr_ARRIENDOLOTE_0.setVisible(true); lyr_ARRIENDOLOCAL_1.setVisible(true); lyr_A
 var layersList = [
     new ol.layer.Group({
         title: 'Mapas Base',
-        fold: 'close',
+        fold: 'open',
         layers: [
             lyr_NoMap_20, lyr_CartoDbPositron_22, lyr_OpenStreetMap,]
     }), lyr_Perimetro_23, lyr_Sector_25, lyr_Manzana_24, lyr_Terreno_26, lyr_U_NOMENCLATRURA_VIAL_27, group_PuntosdeInteres, group_Arriendo, group_Venta];
@@ -404,7 +404,7 @@ lyr_PUNTOS_DE_INTERES_URBANIZACIONES_APARTAMENTO_15.set('fieldAliases', {'OBJECT
 lyr_Perimetro_23.set('fieldAliases', { 'NOMBRE_GEO': 'Nombre', 'AREA_Ha': 'Área Ha', 'AREA_m²': 'Área m²', });
 lyr_Manzana_24.set('fieldAliases', { 'OBJECTID': 'Identificador', 'CODIGO': 'Codigo', 'AREA_M2': 'Área m²', });
 lyr_Sector_25.set('fieldAliases', { 'OBJECTID': 'OBJECTID', 'CODIGO': 'CODIGO', 'USUARIO_LO': 'USUARIO_LO', 'FECHA_LOG': 'FECHA_LOG', 'GLOBALID': 'GLOBALID', 'GLOBALID_S': 'GLOBALID_S', 'CODIGO_MUN': 'CODIGO_MUN', 'SHAPE_Leng': 'SHAPE_Leng', 'SHAPE_Area': 'SHAPE_Area', });
-lyr_Terreno_26.set('fieldAliases', {'t_ili_tid': 't_ili_tid', 'area_terre': 'Área m²', 'avaluo_ter': 'Avaluo&nbspde&nbspTerreno', 'manzana_ve': 'Numero&nbspde&nbspManzana', 'dimension': 'Dimension', 'etiqueta': 'Etiqueta', 'relacion_s': 'relacion_s', 'comienzo_v': 'Comienzo&nbspVida&nbspUtil', 'fin_vida_u': 'Fin&nbspVida&nbspUtil', 'espacio_de': 'Espacio de', 'local_id': 'Id&nbspLocal', 'npn': 'npn', });
+lyr_Terreno_26.set('fieldAliases', { 'NPN': 'NPN', 'AREA_M2': 'Área&nbspm²', });
 lyr_U_NOMENCLATRURA_VIAL_27.set('fieldAliases', { 'OBJECTID': 'OBJECTID', 'TEXTO': 'TEXTO', });
 
 lyr_ARRIENDOLOTE_0.set('fieldImages', { 'NPN': 'TextEdit', 'TIPO_CONST': 'TextEdit', 'NUMERO_PIS': 'Range', 'NUMERO_SOT': 'Range', 'TIPO_DOMIN': 'TextEdit', 'NUMERO_MEZ': 'Range', 'NUMERO_SEM': 'Range', 'COOR_X_F': 'TextEdit', 'COOR_Y_F': 'TextEdit', 'RASTERVALU': 'TextEdit', 'NUM_OFERTA': 'Range', 'BARRIO': 'TextEdit', 'TELEFONO_F': 'TextEdit', 'VALOR_F': 'Range', 'PORCENTAJE': 'TextEdit', 'VALOR_DEPU': 'Range', 'FECHA_F': 'TextEdit', 'NUMERO_D_1': 'Range', 'NUMERO_D_2': 'Range', 'TIPO_DE_CO': 'TextEdit', 'EDAD_DEL_L': 'Range', 'SERVICIOS_': 'TextEdit', 'SERVICIO_1': 'TextEdit', 'SERVICIO_2': 'TextEdit', 'CASA_CANTI': 'Range', 'CASA_CAN_1': 'Range', 'APTO_CANTI': 'TextEdit', 'APTO_NUMER': 'TextEdit', 'APTO_TIENE': 'TextEdit', 'GARAJE_TIP': 'TextEdit', 'GARAJE_T_1': 'TextEdit', 'CANTIDAD_D': 'TextEdit', 'TIPO_DE_IN': 'TextEdit', 'TIPO_DE_OF': 'TextEdit', 'FUENTE_INF': 'TextEdit', 'GARAJE_CAN': 'TextEdit', 'DIRECCION': 'TextEdit', 'AT_M2': 'Range', });
@@ -426,7 +426,7 @@ lyr_PUNTOS_DE_INTERES_URBANIZACIONES_APARTAMENTO_15.set('fieldImages', { 'OBJECT
 lyr_Perimetro_23.set('fieldImages', { 'NOMBRE_GEO': 'TextEdit', 'AREA_Ha': 'TextEdit', 'AREA_m²': 'TextEdit', });
 lyr_Manzana_24.set('fieldImages', { 'OBJECTID': 'TextEdit', 'CODIGO': 'TextEdit', 'AREA_M2': 'TextEdit', });
 lyr_Sector_25.set('fieldImages', { 'OBJECTID': 'TextEdit', 'CODIGO': 'TextEdit', 'USUARIO_LO': 'TextEdit', 'FECHA_LOG': 'DateTime', 'GLOBALID': 'TextEdit', 'GLOBALID_S': 'TextEdit', 'CODIGO_MUN': 'TextEdit', 'SHAPE_Leng': 'TextEdit', 'SHAPE_Area': 'TextEdit', });
-lyr_Terreno_26.set('fieldImages', {'t_ili_tid': 'TextEdit', 'area_terre': 'TextEdit', 'avaluo_ter': 'TextEdit', 'manzana_ve': 'TextEdit', 'dimension': 'TextEdit', 'etiqueta': 'TextEdit', 'relacion_s': 'TextEdit', 'comienzo_v': 'TextEdit', 'fin_vida_u': 'TextEdit', 'espacio_de': 'TextEdit', 'local_id': 'TextEdit', 'npn': 'TextEdit', });
+lyr_Terreno_26.set('fieldImages', { 'NPN': '', 'AREA_M2': '', });
 lyr_U_NOMENCLATRURA_VIAL_27.set('fieldImages', { 'OBJECTID': 'TextEdit', 'TEXTO': 'TextEdit', });
 
 lyr_ARRIENDOLOTE_0.set('fieldLabels', {'NPN': 'inline label', 'TIPO_CONST': 'inline label', 'NUMERO_PIS': 'inline label', 'NUMERO_SOT': 'inline label', 'TIPO_DOMIN': 'inline label', 'NUMERO_MEZ': 'inline label', 'NUMERO_SEM': 'inline label', 'COOR_X_F': 'inline label', 'COOR_Y_F': 'inline label', 'RASTERVALU': 'inline label', 'NUM_OFERTA': 'inline label', 'BARRIO': 'inline label', 'TELEFONO_F': 'inline label', 'VALOR_F': 'inline label', 'PORCENTAJE': 'inline label', 'VALOR_DEPU': 'inline label', 'FECHA_F': 'inline label', 'NUMERO_D_1': 'inline label', 'NUMERO_D_2': 'inline label', 'TIPO_DE_CO': 'inline label', 'EDAD_DEL_L': 'inline label', 'SERVICIOS_': 'inline label', 'SERVICIO_1': 'inline label', 'SERVICIO_2': 'inline label', 'CASA_CANTI': 'inline label', 'CASA_CAN_1': 'inline label', 'APTO_CANTI': 'inline label', 'APTO_NUMER': 'inline label', 'APTO_TIENE': 'inline label', 'GARAJE_TIP': 'inline label', 'GARAJE_T_1': 'inline label', 'CANTIDAD_D': 'inline label', 'TIPO_DE_IN': 'inline label', 'TIPO_DE_OF': 'inline label', 'FUENTE_INF': 'inline label', 'GARAJE_CAN': 'inline label', 'DIRECCION': 'inline label', 'AT_M2': 'inline label', });
@@ -448,7 +448,7 @@ lyr_PUNTOS_DE_INTERES_URBANIZACIONES_APARTAMENTO_15.set('fieldLabels', {'OBJECTI
 lyr_Perimetro_23.set('fieldLabels', { 'NOMBRE_GEO': 'inline label', 'AREA_Ha': 'inline label', 'AREA_m²': 'inline label', });
 lyr_Manzana_24.set('fieldLabels', { 'OBJECTID': 'inline label', 'CODIGO': 'inline label', 'AREA_M2': 'inline label', });
 lyr_Sector_25.set('fieldLabels', { 'OBJECTID': 'no label', 'CODIGO': 'no label', 'USUARIO_LO': 'no label', 'FECHA_LOG': 'no label', 'GLOBALID': 'no label', 'GLOBALID_S': 'no label', 'CODIGO_MUN': 'no label', 'SHAPE_Leng': 'no label', 'SHAPE_Area': 'no label', });
-lyr_Terreno_26.set('fieldLabels', {'t_ili_tid': 'no label', 'area_terre': 'inline label', 'avaluo_ter': 'inline label', 'manzana_ve': 'inline label', 'dimension': 'inline label', 'etiqueta': 'inline label', 'relacion_s': 'inline label', 'comienzo_v': 'inline label', 'fin_vida_u': 'inline label', 'espacio_de': 'inline label', 'local_id': 'inline label', 'npn': 'inline label', });
+lyr_Terreno_26.set('fieldLabels', { 'NPN': 'inline label', 'AREA_M2': 'inline label', });
 lyr_U_NOMENCLATRURA_VIAL_27.set('fieldLabels', { 'OBJECTID': 'no label', 'TEXTO': 'no label', });
 lyr_U_NOMENCLATRURA_VIAL_27.on('precompose', function (evt) {
     evt.context.globalCompositeOperation = 'normal';
