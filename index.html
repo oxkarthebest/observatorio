@@ -64,29 +64,30 @@
     #btn-back {
       position: absolute;
       right: 10px;
-      top: 10px;
+      top: 18px;
     }
 
     button {
-  color: #ffffff;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  text-decoration: none;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 10px;
-  -webkit-box-shadow: 0px 1px 3px #666666;
-  -moz-box-shadow: 0px 1px 3px #666666;
-  box-shadow: 0px 1px 3px #666666;
-  text-shadow: 1px 1px 3px #666666;
-  border: solid #588a7c 2px;
-  background: #19a196;
-}
-button:hover {
-  background: #059499;
-}
+      color: #ffffff;
+      padding-left: 5px;
+      padding-right: 5px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      text-decoration: none;
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      border-radius: 10px;
+      -webkit-box-shadow: 0px 1px 3px #666666;
+      -moz-box-shadow: 0px 1px 3px #666666;
+      box-shadow: 0px 1px 3px #666666;
+      text-shadow: 1px 1px 3px #666666;
+      border: solid #588a7c 2px;
+      background: #19a196;
+    }
+
+    button:hover {
+      background: #059499;
+    }
 
     @media screen and (max-width: 700px) {
       .column {
@@ -125,6 +126,12 @@ button:hover {
       .btn-container a:hover {
         background-color: #059499;
       }
+
+      #btn-back {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
     }
   </style>
 
@@ -139,21 +146,31 @@ button:hover {
   </div>
   <div class="bg-success">
     <div class="py-1">
-      <div class='d-flex bg-light rounded p-2 mb-1 mx-1'>
-        <h2>OFERTAS - VENTAS Y ARRIENDOS</h2>
+      <div class='d-flex bg-light rounded p-2 mb-1 mx-1 align-items-center'>
+        <h2>OFERTAS - VENTAS Y ARRIENDOS</h2><img src="styles/legend/logo-escudo-nuevo2.png"
+          style="height: 50px; padding-right: 400px" class="d-none d-md-block mx-auto" />
         <button id="btn-back" href="#" onclick="goBack()">↲</button>
       </div>
       <div class="row ms-1">
         <div class="column ps-0 pe-1">
-          <div class="bg-light rounded mx-auto text-center " style="height: 623px;">
-            <h6>Mapa de la Ciudad de Neiva</h6>
+          <div class="bg-light rounded mx-auto text-center" style="height: 623px;">
+            <div class="container-fluid">
+              <div class="row d-flex">
+                <div class="col-12 d-flex justify-content-between align-items-center">
+                  <div class="align-items-center justify-content-center mx-auto">
+                    <h5>Mapa de la Ciudad de Neiva</h5>
+                  </div>
+                  <a href="fullsize.html"><button
+                      style="display: flex; padding: 1px; border-radius: 20%; margin: 1px;">⛶</button></a>
+                </div>
+              </div>
+            </div>
             <div id="map" class="d-flex mx-auto" style="height: 95%;">
               <div id="popup" class="ol-popup">
                 <a href="#" id="popup-closer" class="ol-popup-closer"></a>
                 <div id="popup-content"></div>
               </div>
             </div>
-            
           </div>
         </div>
         <div class="column">
@@ -200,16 +217,38 @@ button:hover {
               <div class="h-100">
                 <div class="objeto">
                   <div class='bg-light rounded text-center mb-1 me-1 h-100'>
-                    <h6>Estadisticas por tipo de Inmueble</h6><br />
+                    <div class="container-fluid">
+                      <div class="row d-flex">
+                        <div class="col-12 d-flex justify-content-between align-items-center">
+                          <div class="align-items-center justify-content-center mx-auto">
+                            <h5>Estadisticas por tipo de Inmueble</h5>
+                          </div>
+                          <a href="statistics.html"><button
+                              style="display: flex; padding: 1px; border-radius: 20%; margin: 1px;">⛶</button></a>
+                        </div>
+                      </div>
+                    </div>
                     <div id="chart_div"></div><br />
-                    <div class="pb-1"><button id="boton_alternar" data-tipo="VENTA" onclick="alternarTipoDeOferta()">Cambiar a Arriendo</button></div>
+                    <div class="pb-1"><button id="boton_alternar" data-tipo="VENTA"
+                        onclick="alternarTipoDeOferta()">Cambiar a Arriendo</button></div>
                   </div>
                 </div>
                 <div class="objeto">
                   <div class='bg-light rounded text-center mt-1 me-1 h-100'>
-                    <h6>Intervalo de Valor por Inmueble</h6><br />
+                    <div class="container-fluid">
+                      <div class="row d-flex">
+                        <div class="col-12 d-flex justify-content-between align-items-center">
+                          <div class="align-items-center justify-content-center mx-auto">
+                            <h5>Intervalo de Valor por Inmueble</h5>
+                          </div>
+                          <a href="statistics.html"><button
+                              style="display: flex; padding: 1px; border-radius: 20%; margin: 1px;">⛶</button></a>
+                        </div>
+                      </div>
+                    </div>
                     <div id="chart_div2"></div><br />
-                    <div class="pb-1"><button id="boton_alternar2" data-tipo="VENTA" onclick="alternarTipoDeOferta2()">Cambiar a Arriendo</button></div>
+                    <div class="pb-1"><button id="boton_alternar2" data-tipo="VENTA"
+                        onclick="alternarTipoDeOferta2()">Cambiar a Arriendo</button></div>
                   </div>
                 </div>
               </div>
