@@ -68,25 +68,25 @@
     }
 
     button {
-      color: #ffffff;
+      color: #202020;
       padding-left: 5px;
       padding-right: 5px;
       padding-top: 5px;
       padding-bottom: 5px;
       text-decoration: none;
-      -webkit-border-radius: 15px;
-      -moz-border-radius: 15px;
-      border-radius: 10px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
       -webkit-box-shadow: 0px 1px 3px #666666;
       -moz-box-shadow: 0px 1px 3px #666666;
       box-shadow: 0px 1px 3px #666666;
       text-shadow: 1px 1px 3px #666666;
-      border: solid #588a7c 2px;
-      background: #19a196;
+      border: solid #3d3d3d 2px;
+      background: #d9dbdb;
     }
-
+    
     button:hover {
-      background: #059499;
+      background: #21cfc1;
     }
 
     @media screen and (max-width: 700px) {
@@ -147,21 +147,21 @@
   <div class="bg-success">
     <div class="py-1">
       <div class='d-flex bg-light rounded p-2 mb-1 mx-1 align-items-center'>
-        <h2>OFERTAS - VENTAS Y ARRIENDOS</h2><img src="styles/legend/logo-escudo-nuevo2.png"
+        <h2>OFERTAS - VENTAS Y ARRIENDOS</h2><img src="styles/legend/logo-escudo.png"
           style="height: 50px; padding-right: 400px" class="d-none d-md-block mx-auto" />
         <button id="btn-back" href="#" onclick="goBack()">↲</button>
       </div>
       <div class="row ms-1">
         <div class="column ps-0 pe-1">
-          <div class="bg-light rounded mx-auto text-center" style="height: 623px;">
+          <div class="bg-light rounded mx-auto text-center" style="height: 620px;">
             <div class="container-fluid">
               <div class="row d-flex">
                 <div class="col-12 d-flex justify-content-between align-items-center">
                   <div class="align-items-center justify-content-center mx-auto">
                     <h5>Mapa de la Ciudad de Neiva</h5>
                   </div>
-                  <a href="fullsize.html"><button
-                      style="display: flex; padding: 1px; border-radius: 20%; margin: 1px;">⛶</button></a>
+                  <a href="fullsize.html"><button class="align-items-center justify-content-center mx-auto"
+                      style="display: flex; padding: 1px; border-radius: 20%; margin: 1px; width: 25px; height: 25px;">⛶</button></a>
                 </div>
               </div>
             </div>
@@ -180,17 +180,17 @@
                 <h6>Total Ventas</h6>
                 <h6 id="venta"></h6>
                 <span>Apartamento</span>
-                <div><img src="styles/legend/APTO.png" /><span id="venapto"></span></div>
+                <div class="d-flex justify-content-around px-2 align-items-center justify-content-center"><img src="styles/legend/APTO.png" style="height: 16px; width: 16px;" /><span id="venapto"></span></div>
                 <span>Bodega</span>
-                <div><img src="styles/legend/BODEGA.png" /><span id="venbode"></span></div>
+                <div  class="d-flex justify-content-around px-2 align-items-center justify-content-center"><img src="styles/legend/BODEGA.png" style="height: 16px; width: 16px;"/><span id="venbode"></span></div>
                 <span>Casa</span>
-                <div><img src="styles/legend/CASA.png" /><span id="vencasa"></span></div>
+                <div  class="d-flex justify-content-around px-2 align-items-center justify-content-center"><img src="styles/legend/CASA.png" style="height: 16px; width: 16px;"/><span id="vencasa"></span></div>
                 <span>Habitación</span>
-                <div><img src="styles/legend/HABITACION.png" /><span id="venhabi"></span></div>
+                <div class="d-flex justify-content-around px-2 align-items-center justify-content-center"><img src="styles/legend/HABITACION.png" style="height: 16px; width: 16px;"/><span id="venhabi"></span></div>
                 <span>Local</span>
-                <div><img src="styles/legend/LOCAL.png" /><span id="venloca"></span></div>
+                <div class="d-flex justify-content-around px-2 align-items-center justify-content-center"><img src="styles/legend/LOCAL.png" style="height: 16px; width: 16px;"/><span id="venloca"></span></div>
                 <span>Lote</span>
-                <div class="pb-1"><img src="styles/legend/LOTE.png" /><span id="venlote"></span></div>
+                <div class="d-flex justify-content-around pb-1 px-2 align-items-center justify-content-center"><img src="styles/legend/LOTE.png" style="height: 16px; width: 16px;"/><span id="venlote"></span></div>
               </div>
               <div class='bg-light rounded my-1 p-1'>
                 <h6>Total Ofertas</h6>
@@ -200,17 +200,17 @@
                 <h6>Total Arriendos</h6>
                 <h6 id="arriendo"></h6>
                 <span>Apartamento</span>
-                <div><img src="styles/legend/APTO1.png" /><span id="arrapto"></span></div>
+                <div class="d-flex justify-content-around px-2 align-items-center justify-content-center"><img src="styles/legend/APTO1.png" style="height: 16px; width: 16px;"/><span id="arrapto"></span></div>
                 <span>Bodega</span>
-                <div><img src="styles/legend/BODEGA1.png" /><span id="arrbode"></span></div>
+                <div class="d-flex justify-content-around px-2 align-items-center justify-content-center"><img src="styles/legend/BODEGA1.png" style="height: 16px; width: 16px;"/><span id="arrbode"></span></div>
                 <span>Casa</span>
-                <div><img src="styles/legend/CASA1.png" /><span id="arrcasa"></span></div>
+                <div class="d-flex justify-content-around px-2 align-items-center justify-content-center"><img src="styles/legend/CASA1.png" style="height: 16px; width: 16px;"/><span id="arrcasa"></span></div>
                 <span>Habitación</span>
-                <div><img src="styles/legend/HABITACION1.png" /><span id="arrhabi"></span></div>
+                <div class="d-flex justify-content-around px-2 align-items-center justify-content-center"><img src="styles/legend/HABITACION1.png" style="height: 16px; width: 16px;"/><span id="arrhabi"></span></div>
                 <span>Local</span>
-                <div><img src="styles/legend/LOCAL1.png" /><span id="arrloca"></span></div>
+                <div class="d-flex justify-content-around px-2 align-items-center justify-content-center"><img src="styles/legend/LOCAL1.png" style="height: 16px; width: 16px;"/><span id="arrloca"></span></div>
                 <span>Lote</span>
-                <div class="pb-1"><img src="styles/legend/LOTE1.png" /><span id="arrlote"></span></div>
+                <div class="d-flex justify-content-around px-2 align-items-center justify-content-center pb-1"><img src="styles/legend/LOTE1.png" style="height: 16px; width: 16px;"/><span id="arrlote"></span></div>
               </div>
             </div>
             <div class='col-10 ps-0'>
@@ -223,8 +223,8 @@
                           <div class="align-items-center justify-content-center mx-auto">
                             <h5>Estadisticas por tipo de Inmueble</h5>
                           </div>
-                          <a href="statistics.html"><button
-                              style="display: flex; padding: 1px; border-radius: 20%; margin: 1px;">⛶</button></a>
+                          <a href="statistics.html"><button class="align-items-center justify-content-center mx-auto"
+                              style="display: flex; padding: 1px; border-radius: 20%; margin: 1px; width: 25px; height: 25px;">⛶</button></a>
                         </div>
                       </div>
                     </div>
@@ -241,8 +241,8 @@
                           <div class="align-items-center justify-content-center mx-auto">
                             <h5>Intervalo de Valor por Inmueble</h5>
                           </div>
-                          <a href="statistics.html"><button
-                              style="display: flex; padding: 1px; border-radius: 20%; margin: 1px;">⛶</button></a>
+                          <a href="statistics.html"><button class="align-items-center justify-content-center mx-auto"
+                            style="display: flex; padding: 1px; border-radius: 20%; margin: 1px; width: 25px; height: 25px;">⛶</button></a>
                         </div>
                       </div>
                     </div>

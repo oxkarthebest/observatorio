@@ -68,26 +68,27 @@
         }
 
         button {
-            color: #ffffff;
-            padding-left: 5px;
-            padding-right: 5px;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            text-decoration: none;
-            -webkit-border-radius: 15px;
-            -moz-border-radius: 15px;
-            border-radius: 10px;
-            -webkit-box-shadow: 0px 1px 3px #666666;
-            -moz-box-shadow: 0px 1px 3px #666666;
-            box-shadow: 0px 1px 3px #666666;
-            text-shadow: 1px 1px 3px #666666;
-            border: solid #588a7c 2px;
-            background: #19a196;
-        }
+      color: #202020;
+      padding-left: 5px;
+      padding-right: 5px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      text-decoration: none;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      -webkit-box-shadow: 0px 1px 3px #666666;
+      -moz-box-shadow: 0px 1px 3px #666666;
+      box-shadow: 0px 1px 3px #666666;
+      text-shadow: 1px 1px 3px #666666;
+      border: solid #3d3d3d 2px;
+      background: #d9dbdb;
+    }
+    
+    button:hover {
+      background: #21cfc1;
+    }
 
-        button:hover {
-            background: #059499;
-        }
 
         @media screen and (max-width: 700px) {
             .column {
@@ -144,10 +145,10 @@
         <a onclick="scrollToTop()" class="btn-top">▲</a>
         <a onclick="scrollToBottom()" class="btn-bottom">▼</a>
     </div>
-    <div class="bg-success">
+    <div class="bg-success h-100">
         <div class="py-1">
             <div class='d-flex bg-light rounded p-2 mb-1 mx-1 align-items-center'>
-                <h2>OFERTAS - VENTAS Y ARRIENDOS</h2><img src="styles/legend/logo-escudo-nuevo2.png"
+                <h2>OFERTAS - VENTAS Y ARRIENDOS</h2><img src="styles/legend/logo-escudo.png"
                     style="height: 50px; padding-right: 400px" class="d-none d-md-block mx-auto" />
                 <button id="btn-back" href="#" onclick="goBack()">↲</button>
             </div>
