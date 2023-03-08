@@ -68,26 +68,26 @@
         }
 
         button {
-      color: #202020;
-      padding-left: 5px;
-      padding-right: 5px;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      text-decoration: none;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      border-radius: 5px;
-      -webkit-box-shadow: 0px 1px 3px #666666;
-      -moz-box-shadow: 0px 1px 3px #666666;
-      box-shadow: 0px 1px 3px #666666;
-      text-shadow: 1px 1px 3px #666666;
-      border: solid #3d3d3d 2px;
-      background: #d9dbdb;
-    }
-    
-    button:hover {
-      background: #21cfc1;
-    }
+            color: #202020;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            text-decoration: none;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            -webkit-box-shadow: 0px 1px 3px #666666;
+            -moz-box-shadow: 0px 1px 3px #666666;
+            box-shadow: 0px 1px 3px #666666;
+            text-shadow: 1px 1px 3px #666666;
+            border: solid #3d3d3d 2px;
+            background: #d9dbdb;
+        }
+
+        button:hover {
+            background: #21cfc1;
+        }
 
 
         @media screen and (max-width: 700px) {
@@ -145,45 +145,45 @@
         <a onclick="scrollToTop()" class="btn-top">▲</a>
         <a onclick="scrollToBottom()" class="btn-bottom">▼</a>
     </div>
-    <div class="bg-success h-100">
-        <div class="py-1">
-            <div class='d-flex bg-light rounded p-2 mb-1 mx-1 align-items-center'>
-                <h2>OFERTAS - VENTAS Y ARRIENDOS</h2><img src="styles/legend/logo-escudo.png"
-                    style="height: 50px; padding-right: 400px" class="d-none d-md-block mx-auto" />
-                <button id="btn-back" href="#" onclick="goBack()">↲</button>
-            </div>
-            <div class="row m-1">
-                <div class="column pe-md-1">
-                    <div class='bg-light rounded text-center'>
-                        <div class="container-fluid">
-                            <div class="row d-flex">
-                                <div class="col-12 d-flex justify-content-between align-items-center">
-                                    <div class="align-items-center justify-content-center mx-auto">
-                                        <h5>Estadisticas por tipo de Inmueble</h5>
-                                    </div>
+    <div class="bg-success py-1" style="height: 100%;">
+        <div class='d-flex bg-light rounded p-2 mb-1 mx-1 align-items-center' style="height: 10%; ">
+            <h2>OFERTAS - VENTAS Y ARRIENDOS</h2><img src="styles/legend/logo-escudo.png"
+                style="padding-right: 400px; height: 100%;" class="d-none d-md-block mx-auto" />
+            <button id="btn-back" href="#" onclick="goBack()">↲</button>
+        </div>
+        <div class="row m-1" style="height: 90%;">
+            <div class="column h-100 pe-md-1">
+                <div class='bg-light rounded text-center' style="height: 100%;">
+                    <div class="container-fluid">
+                        <div class="row d-flex">
+                            <div class="col-12 d-flex justify-content-between align-items-center">
+                                <div class="align-items-center justify-content-center mx-auto">
+                                    <h5>Estadisticas por tipo de Inmueble</h5>
                                 </div>
                             </div>
                         </div>
-                        <div id="chart_div" style="height: 498px;"></div><br />
-                        <div class="pb-1"><button id="boton_alternar" data-tipo="VENTA" style="width: 150px;"
-                                onclick="alternarTipoDeOferta()">Cambiar a Arriendo</button></div>
+                    </div>
+                    <div id="chart_div" style="height: 89%;"></div>
+                    <div class="pb-1">
+                        <button id="boton_alternar" data-tipo="VENTA" style="width: 150px;"
+                            onclick="alternarTipoDeOferta()">Cambiar a Arriendo</button>
                     </div>
                 </div>
-                <div class="column">
-                    <div class='bg-light rounded text-center'>
-                        <div class="container-fluid">
-                            <div class="row d-flex">
-                                <div class="col-12 d-flex justify-content-between align-items-center">
-                                    <div class="align-items-center justify-content-center mx-auto">
-                                        <h5>Intervalo de Valor por Inmueble</h5>
-                                    </div>
+            </div>
+            <div class="column bg-danger" style="height: 100%;">
+                <div class='bg-light rounded text-center' style="height: 100%;">
+                    <div class="container-fluid">
+                        <div class="row d-flex">
+                            <div class="col-12 d-flex justify-content-between align-items-center">
+                                <div class="align-items-center justify-content-center mx-auto">
+                                    <h5>Intervalo de Valor por Inmueble</h5>
                                 </div>
                             </div>
                         </div>
-                        <div id="chart_div2" style="height: 498px;"></div><br />
-                        <div class="pb-1"><button id="boton_alternar2" data-tipo="VENTA" style="width: 150px;"
-                                onclick="alternarTipoDeOferta2()">Cambiar a Arriendo</button></div>
                     </div>
+                    <div id="chart_div2" style="height: 89%;"></div>
+                    <div class="pb-1"><button id="boton_alternar2" data-tipo="VENTA" style="width: 150px;"
+                            onclick="alternarTipoDeOferta2()">Cambiar a Arriendo</button></div>
                 </div>
             </div>
         </div>
