@@ -49,6 +49,10 @@
             top: 18px;
         }
 
+        canvas {
+            height: 100%;
+        }
+
         @media screen and (max-width: 700px) {
 
             #btn-back {
@@ -64,14 +68,14 @@
 </head>
 
 <body>
-    <div class="bg-success p-1" style="height: 100%;">
+    <div class="p-1" style="height: 100vh; background: #19a196;">
         <div class='d-flex bg-light rounded p-2 mb-1 align-items-center' style="height: 10%;">
             <h2>OFERTAS - VENTAS Y ARRIENDOS</h2><img src="styles/legend/logo-escudo.png"
                 style="height: 100%; padding-right: 400px" class="d-none d-md-block mx-auto" />
             <button id="btn-back" href="#" onclick="goBack()">↲</button>
         </div>
-        <div class="bg-light rounded" style="height: 90%">
-            <div id="map" style="height: 100%;">
+        <div class="bg-light rounded" style="height: 100%">
+            <div id="map" class="overflow-auto" style="height: 100%;">
                 <div id="popup" class="ol-popup">
                     <a href="#" id="popup-closer" class="ol-popup-closer"></a>
                     <div id="popup-content"></div>

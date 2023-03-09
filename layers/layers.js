@@ -362,7 +362,7 @@ var lyr_U_NOMENCLATRURA_VIAL_27 = new ol.layer.Vector({
 var group_PuntosdeInteres = new ol.layer.Group({
     layers: [lyr_PUNTOS_DE_INTERES_URBANIZACIONES_LOTE_12, lyr_PUNTOS_DE_INTERES_URBANIZACIONES_CONDOMINIO_13, lyr_PUNTOS_DE_INTERES_URBANIZACIONES_CASA_14, lyr_PUNTOS_DE_INTERES_URBANIZACIONES_APARTAMENTO_15,],
     title: "Puntos de Interes",
-    fold: 'close',
+    fold: 'open',
 });
 var group_Venta = new ol.layer.Group({
     layers: [lyr_VENTALOTE_6, lyr_VENTALOCAL_7, lyr_VENTAHABITACION_8, lyr_VENTACASA_9, lyr_VENTABODEGA_10, lyr_VENTAAPTO_11,],

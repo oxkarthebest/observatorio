@@ -84,6 +84,10 @@
       background: #21cfc1;
     }
 
+    canvas {
+      height: 100%;
+    }
+
     @media screen and (max-width: 700px) {
       .column {
         width: 100%;
@@ -140,24 +144,22 @@
     <a onclick="scrollToBottom()" class="btn-bottom">▼</a>
   </div>
 
-  <div class="bg-success p-1" style="height: 110vh;">
-    <div class='d-flex bg-light rounded p-2 mb-1 align-items-center' style="height: 10vh;">
+  <div class="p-1" style="height: 100vh; background-color: #19a196;">
+    <div class='d-flex bg-light rounded p-2 mb-1 align-items-center' style="height: 10%;">
       <h2>OFERTAS - VENTAS Y ARRIENDOS</h2><img src="styles/legend/logo-escudo.png"
         style="height: 100%; padding-right: 400px" class="d-none d-md-block mx-auto" />
       <button id="btn-back" href="#" onclick="goBack()">↲</button>
     </div>
     <div class="row">
-      <div class="column ps-0">
-        <div class="bg-light rounded mx-auto text-center" style="height: 100vh;">
-          <div class="container-fluid">
-            <div class="row d-flex">
-              <div class="col-12 d-flex justify-content-between align-items-center">
-                <div class="align-items-center justify-content-center mx-auto">
-                  <h5>Mapa de la Ciudad de Neiva</h5>
-                </div>
-                <a href="fullsize.html"><button class="align-items-center justify-content-center mx-auto"
-                    style="display: flex; padding: 1px; border-radius: 20%; margin: 1px; width: 25px; height: 25px;">⛶</button></a>
+      <div class="column">
+        <div class="bg-light rounded mx-auto text-center container-fluid" style="height: 100vh;">
+          <div class="row d-flex">
+            <div class="col-12 d-flex justify-content-between align-items-center">
+              <div class="align-items-center justify-content-center mx-auto">
+                <h5>Mapa de la Ciudad de Neiva</h5>
               </div>
+              <a href="fullsize.html"><button class="align-items-center justify-content-center mx-auto"
+                  style="display: flex; padding: 1px; border-radius: 20%; margin: 1px; width: 25px; height: 25px;">⛶</button></a>
             </div>
           </div>
           <div id="map" class="d-flex mx-auto" style="height: 95%;">
@@ -171,10 +173,9 @@
       <div class="column">
         <div class="row">
           <div class='col-2 text-center px-1'>
-            <div class='bg-light rounded align-items-center' style="height: 44.5%;">
+            <div class='bg-light rounded align-items-center' style="height: 45vh;">
               <h6>Total Ventas</h6>
-              <h5 id="venta"></h5>
-              <hr>
+              <h6 id="venta"></h6>
               <span>Apartamento</span>
               <div class="d-flex justify-content-around px-2 align-items-center justify-content-center"><img
                   src="styles/legend/APTO.png" style="height: 16px; width: 16px;" /><span id="venapto"
@@ -200,14 +201,13 @@
                   src="styles/legend/LOTE.png" style="height: 16px; width: 16px;" /><span id="venlote"
                   style="width: 20px;"></span></div>
             </div>
-            <div class='bg-light rounded my-1 p-1' style="height: 10%;">
-              <h6>Total Ofertas</h6>
-              <h4 id="todos"></h4>
+            <div class='bg-light rounded my-1 p-1' style="height: 9.2vh;">
+              <h5>Total Ofertas</h5>
+              <h5 id="todos"></h5>
             </div>
-            <div class='bg-light rounded' style="height: 44.5%;">
+            <div class='bg-light rounded' style="height: 45vh;">
               <h6>Total Arriendos</h6>
-              <h5 id="arriendo"></h5>
-              <hr>
+              <h6 id="arriendo"></h6>
               <span>Apartamento</span>
               <div class="d-flex justify-content-around px-2 align-items-center justify-content-center"><img
                   src="styles/legend/APTO1.png" style="height: 16px; width: 16px;" /><span id="arrapto"
@@ -235,7 +235,7 @@
             </div>
           </div>
           <div class='col-10 ps-0'>
-            <div class='bg-light rounded text-center' style="height: 50vh;">
+            <div class='bg-light rounded text-center mb-1' style="height: 50vh;">
               <div class="container-fluid">
                 <div class="row d-flex">
                   <div class="col-12 d-flex justify-content-between align-items-center">
@@ -251,7 +251,7 @@
               <div class="py-2"><button id="boton_alternar" data-tipo="VENTA" style="width: 150px;"
                   onclick="alternarTipoDeOferta()">Cambiar a Arriendo</button></div>
             </div>
-            <div class='bg-light rounded text-center mt-1' style="height: 50vh;">
+            <div class='bg-light rounded text-center' style="height: 49.5vh;">
               <div class="container-fluid">
                 <div class="row d-flex">
                   <div class="col-12 d-flex justify-content-between align-items-center">
@@ -272,6 +272,7 @@
       </div>
     </div>
   </div>
+
 
   <script src="resources/qgis2web_expressions.js"></script>
   <script src="resources/polyfills.js"></script>

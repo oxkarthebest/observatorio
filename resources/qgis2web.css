@@ -5,6 +5,7 @@ body {
     margin: 0;
     font-family: sans-serif;
     font-size: small;
+    background: #19a196;
 }
 
 table {
@@ -197,3 +198,5 @@ th {
 .ol-touch .measure-control {
     top: 80px;
 }
+
+  
