@@ -2,6 +2,7 @@
 // Asumiendo que el archivo está en la misma carpeta que este archivo JavaScript
 var chart = document.createElement('chart');
 chart.src = 'layers/OFERTAS_OBSERVATORIO.js';
+chart2Actual = 2;
 document.head.appendChild(chart);
 
 function drawChart2(tipoDeOferta) {
@@ -103,10 +104,12 @@ function drawChart2(tipoDeOferta) {
 function alternarTipoDeOferta2() {
   var boton = document.getElementById('boton_alternar2');
   if (boton.dataset.tipo === 'VENTA') {
+    chart2Actual = 1;
     boton.dataset.tipo = 'ARRIENDO';
     boton.textContent = 'Cambiar a Venta';
     drawChart2('ARRIENDO');
   } else {
+    chart2Actual = 2;
     boton.dataset.tipo = 'VENTA';
     boton.textContent = 'Cambiar a Arriendo';
     drawChart2('VENTA');
@@ -129,4 +132,9 @@ function cambiarOferta() {
 google.charts.load('current', { 'packages': ['corechart'] });
 google.charts.setOnLoadCallback(function () {
   drawChart2('VENTA');
+});
+
+window.addEventListener('resize', function () {
+  chart2Actual === 1 ? drawChart2('ARRIENDO') : drawChart2('VENTA');
+  //drawChart('VENTA');
 });

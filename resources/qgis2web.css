@@ -5,7 +5,7 @@ body {
     margin: 0;
     font-family: sans-serif;
     font-size: small;
-    background: #19a196;
+    background: #ffffff;
 }
 
 table {
@@ -34,12 +34,6 @@ th {
     border: 1px solid rgb(125, 125, 125);
 }
 
-#map {
-  bottom: 0; 
-    width: 100%;
-    height: 100%;
-}
-
 .title-popup {
     width: 100%;
     text-align: center;
@@ -48,6 +42,7 @@ th {
 
 .ol-popup {
     left: -50%;
+    top: 15px;
     display: none;
     position: relative;
     background-color: rgb(230, 230, 230);
@@ -61,6 +56,7 @@ th {
     height: auto;
     width: auto;
     min-width: 150px;
+    max-width: 450px;
     max-height: 280px;
     overflow: auto;
 }

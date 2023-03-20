@@ -3,6 +3,7 @@
 var chart = document.createElement('chart');
 chart.src = 'layers/OFERTAS_OBSERVATORIO.js';
 document.head.appendChild(chart);
+var chart1Actual = 2;
 
 // Función para dibujar el gráfico
 function drawChart(tipoDeOferta) {
@@ -66,10 +67,12 @@ function drawChart(tipoDeOferta) {
 function alternarTipoDeOferta() {
     var boton = document.getElementById('boton_alternar');
     if (boton.dataset.tipo === 'VENTA') {
+        chart1Actual = 1;
         boton.dataset.tipo = 'ARRIENDO';
         boton.textContent = 'Cambiar a Venta';
         drawChart('ARRIENDO');
     } else {
+        chart1Actual = 2;
         boton.dataset.tipo = 'VENTA';
         boton.textContent = 'Cambiar a Arriendo';
         drawChart('VENTA');
@@ -92,4 +95,9 @@ function cambiarOferta() {
 google.charts.load('current', { 'packages': ['corechart'] });
 google.charts.setOnLoadCallback(function () {
     drawChart('VENTA');
+});
+
+window.addEventListener('resize', function () {
+    chart1Actual === 1 ? drawChart('ARRIENDO') : drawChart('VENTA');
+    //drawChart('VENTA');
 });

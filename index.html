@@ -1,315 +1,260 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <link rel="stylesheet" href="./resources/ol.css">
-  <link rel="stylesheet" href="resources/fontawesome-all.min.css">
-  <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
-  <link rel="stylesheet" href="./resources/qgis2web.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  <script type="text/javascript"></script>
-  <script>
-    function scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    }
-
-    function scrollToBottom() {
-      window.scrollTo({
-        top: document.body.scrollHeight,
-        behavior: 'smooth'
-      });
-    }
-
-    function goBack() {
-      window.history.back();
-    }
-
-  </script>
-  <style>
-    .row::after {
-      content: "";
-      clear: both;
-      display: table;
-    }
-
-    .column {
-      float: center;
-      width: 50%;
-    }
-
-    .row {
-      --bs-gutter-x: 0;
-      --bs-gutter-y: 0;
-    }
-
-    .btn-container {
-      display: none;
-    }
-
-    #btn-back {
-      position: absolute;
-      right: 10px;
-      top: 18px;
-    }
-
-    button {
-      color: #202020;
-      padding-left: 5px;
-      padding-right: 5px;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      text-decoration: none;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      border-radius: 5px;
-      -webkit-box-shadow: 0px 1px 3px #666666;
-      -moz-box-shadow: 0px 1px 3px #666666;
-      box-shadow: 0px 1px 3px #666666;
-      text-shadow: 1px 1px 3px #666666;
-      border: solid #3d3d3d 2px;
-      background: #d9dbdb;
-    }
-
-    button:hover {
-      background: #21cfc1;
-    }
-
-
-    @media screen and (max-width: 700px) {
-      .column {
-        width: 100%;
-        margin-bottom: 4px;
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width"
+    />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="./resources/ol.css" />
+    <link rel="stylesheet" href="resources/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="./resources/ol-layerswitcher.css" />
+    <link rel="stylesheet" href="./resources/qgis2web.css" />
+    <link rel="stylesheet" href="./resources/index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript"></script>
+    <script>
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
       }
 
-      .ol-popup {
-        max-height: 260px;
+      function scrollToBottom() {
+        var height = window.innerHeight;
+        window.scrollTo({
+          top: window.innerHeight,
+          behavior: "smooth",
+        });
       }
+    </script>
 
-      .btn-container {
-        position: fixed;
-        right: 5px;
-        bottom: 5px;
-        display: flex;
-        flex-direction: column;
-        z-index: 9999;
-      }
+    <title>Observatorio Inmobiliario - Ofertas Ventas y Arriendos</title>
+  </head>
 
-      .btn-container a {
-        display: block;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 15px;
-        padding-right: 15px;
-        margin-bottom: 5px;
-        border-radius: 50%;
-        background-color: #19a196;
-        color: #fff;
-        text-align: center;
-        text-decoration: none;
-        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-      }
-
-      .btn-container a:hover {
-        background-color: #059499;
-      }
-
-      #btn-back {
-        position: absolute;
-        right: 10px;
-        top: 10px;
-      }
-    }
-  </style>
-
-  <title>Observatorio Inmobiliario - Ofertas Ventas y Arriendos</title>
-
-</head>
-
-<body>
-  <div class="btn-container">
-    <a onclick="scrollToTop()" class="btn-top">▲</a>
-    <a onclick="scrollToBottom()" class="btn-bottom">▼</a>
-  </div>
-
-  <div class="p-1" style="height: 100vh; background-color: #19a196;">
-    <div class='d-flex bg-light rounded p-2 mb-1 align-items-center' style="height: 10%;">
-      <h2>OFERTAS - VENTAS Y ARRIENDOS</h2><img src="styles/legend/logo-escudo.png"
-        style="height: 100%; padding-right: 400px" class="d-none d-md-block mx-auto" />
-      <button id="btn-back" href="#" onclick="goBack()">↲</button>
+  <body>
+    <div class="btn-container" id="btn-container">
+      <a onclick="scrollToTop()" class="btn-top">▲</a>
+      <a onclick="scrollToBottom()" class="btn-bottom">▼</a>
     </div>
-    <div class="row">
-      <div class="column">
-        <div class="bg-light rounded mx-auto text-center container-fluid" style="height: 100vh;">
-          <div class="row d-flex">
-            <div class="col-12 d-flex justify-content-between align-items-center">
-              <div class="align-items-center justify-content-center mx-auto">
-                <h5>Mapa de la Ciudad de Neiva</h5>
-              </div>
-              <a href="fullsize.html"><button class="align-items-center justify-content-center mx-auto"
-                  style="display: flex; padding: 1px; border-radius: 20%; margin: 1px; width: 25px; height: 25px;">⛶</button></a>
-            </div>
-          </div>
-          <div id="map" class="d-flex mx-auto" style="height: 95%;">
+    <div class="div-container border-per">
+      <div class="div-title border-per" id="div-title">
+        <img src="styles/legend/logo-escudo.png" alt="logo-Neiva" />
+        <p>OFERTAS DE VENTAS Y ARRIENDOS</p>
+      </div>
+      <div class="div-wrapper" id="div-wrapper">
+        <div class="div-map-container border-per" id="div-map-container">
+          <button
+            title="Pantalla completa"
+            class="btn-full-screen-map"
+            id="btn-full-screen-map"
+          >
+            ⛶
+          </button>
+          <button title="Volver" class="btn-screen-map" id="btn-screen-map">
+            ⛶
+          </button>
+          <div id="map" class="map">
             <div id="popup" class="ol-popup">
               <a href="#" id="popup-closer" class="ol-popup-closer"></a>
               <div id="popup-content"></div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="column">
-        <div class="row">
-          <div class='col-2 text-center px-1'>
-            <div class='bg-light rounded align-items-center' style="height: 45vh;">
-              <h6>Total Ventas</h6>
-              <h6 id="venta"></h6>
-              <span>Apartamento</span>
-              <div class="d-flex justify-content-around px-2 align-items-center justify-content-center"><img
-                  src="styles/legend/APTO.png" style="height: 16px; width: 16px;" /><span id="venapto"
-                  style="width: 20px;"></span></div>
-              <span>Bodega</span>
-              <div class="d-flex justify-content-around px-2 align-items-center justify-content-center"><img
-                  src="styles/legend/BODEGA.png" style="height: 16px; width: 16px;" /><span id="venbode"
-                  style="width: 20px;"></span></div>
-              <span>Casa</span>
-              <div class="d-flex justify-content-around px-2 align-items-center justify-content-center"><img
-                  src="styles/legend/CASA.png" style="height: 16px; width: 16px;" /><span id="vencasa"
-                  style="width: 20px;"></span></div>
-              <span>Habitación</span>
-              <div class="d-flex justify-content-around px-2 align-items-center justify-content-center"><img
-                  src="styles/legend/HABITACION.png" style="height: 16px; width: 16px;" /><span id="venhabi"
-                  style="width: 20px;"></span></div>
-              <span>Local</span>
-              <div class="d-flex justify-content-around px-2 align-items-center justify-content-center"><img
-                  src="styles/legend/LOCAL.png" style="height: 16px; width: 16px;" /><span id="venloca"
-                  style="width: 20px;"></span></div>
-              <span>Lote</span>
-              <div class="d-flex justify-content-around pb-1 px-2 align-items-center justify-content-center"><img
-                  src="styles/legend/LOTE.png" style="height: 16px; width: 16px;" /><span id="venlote"
-                  style="width: 20px;"></span></div>
+        <div class="sub-container" id="sub-container">
+          <div class="div-items-container" id="div-items-container">
+            <div class="div-offers border-per">
+              <p class="item-title">Total ofertas</p>
+              <p class="item-value" id="todos"></p>
             </div>
-            <div class='bg-light rounded my-1 p-1' style="height: 9.2vh;">
-              <h5>Total Ofertas</h5>
-              <h5 id="todos"></h5>
+            <div class="div-sales border-per">
+              <div class="div-item">
+                <p class="item-title">Total ventas</p>
+                <p class="item-value" id="venta"></p>
+              </div>
+              <div class="div-item">
+                <p class="item-title">Apartamentos</p>
+                <div>
+                  <img src="styles/legend/APTO.png" alt="Icono" />
+                  <p class="item-value" id="venapto"></p>
+                </div>
+              </div>
+              <div class="div-item">
+                <p class="item-title">Bodegas</p>
+                <div>
+                  <img src="styles/legend/BODEGA.png" alt="Icono" />
+                  <p class="item-value" id="venbode"></p>
+                </div>
+              </div>
+              <div class="div-item">
+                <p class="item-title">Casas</p>
+                <div>
+                  <img src="styles/legend/CASA.png" alt="Icono" />
+                  <p class="item-value" id="vencasa"></p>
+                </div>
+              </div>
+              <div class="div-item">
+                <p class="item-title">Habitaciones</p>
+                <div>
+                  <img src="styles/legend/HABITACION.png" alt="Icono" />
+                  <p class="item-value" id="venhabi"></p>
+                </div>
+              </div>
+              <div class="div-item">
+                <p class="item-title">Locales</p>
+                <div>
+                  <img src="styles/legend/LOCAL.png" alt="Icono" />
+                  <p class="item-value" id="venloca"></p>
+                </div>
+              </div>
+              <div class="div-item">
+                <p class="item-title">Lotes</p>
+                <div>
+                  <img src="styles/legend/LOTE.png" alt="Icono" />
+                  <p class="item-value" id="venlote"></p>
+                </div>
+              </div>
             </div>
-            <div class='bg-light rounded' style="height: 45vh;">
-              <h6>Total Arriendos</h6>
-              <h6 id="arriendo"></h6>
-              <span>Apartamento</span>
-              <div class="d-flex justify-content-around px-2 align-items-center justify-content-center"><img
-                  src="styles/legend/APTO1.png" style="height: 16px; width: 16px;" /><span id="arrapto"
-                  style="width: 20px;"></span></div>
-              <span>Bodega</span>
-              <div class="d-flex justify-content-around px-2 align-items-center justify-content-center"><img
-                  src="styles/legend/BODEGA1.png" style="height: 16px; width: 16px;" /><span id="arrbode"
-                  style="width: 20px;"></span></div>
-              <span>Casa</span>
-              <div class="d-flex justify-content-around px-2 align-items-center justify-content-center"><img
-                  src="styles/legend/CASA1.png" style="height: 16px; width: 16px;" /><span id="arrcasa"
-                  style="width: 20px;"></span></div>
-              <span>Habitación</span>
-              <div class="d-flex justify-content-around px-2 align-items-center justify-content-center"><img
-                  src="styles/legend/HABITACION1.png" style="height: 16px; width: 16px;" /><span id="arrhabi"
-                  style="width: 20px;"></span></div>
-              <span>Local</span>
-              <div class="d-flex justify-content-around px-2 align-items-center justify-content-center"><img
-                  src="styles/legend/LOCAL1.png" style="height: 16px; width: 16px;" /><span id="arrloca"
-                  style="width: 20px;"></span></div>
-              <span>Lote</span>
-              <div class="d-flex justify-content-around px-2 align-items-center justify-content-center pb-1"><img
-                  src="styles/legend/LOTE1.png" style="height: 16px; width: 16px;" /><span id="arrlote"
-                  style="width: 20px;"></span></div>
+            <div class="div-leases border-per">
+              <div class="div-item">
+                <p class="item-title">Total arriendos</p>
+                <p class="item-value" id="arriendo"></p>
+              </div>
+              <div class="div-item">
+                <p class="item-title">Apartamentos</p>
+                <div>
+                  <img src="styles/legend/APTO1.png" alt="Icono" />
+                  <p class="item-value" id="arrapto"></p>
+                </div>
+              </div>
+              <div class="div-item">
+                <p class="item-title">Bodegas</p>
+                <div>
+                  <img src="styles/legend/BODEGA1.png" alt="Icono" />
+                  <p class="item-value" id="arrbode"></p>
+                </div>
+              </div>
+              <div class="div-item">
+                <p class="item-title">Casas</p>
+                <div>
+                  <img src="styles/legend/CASA1.png" alt="Icono" />
+                  <p class="item-value" id="arrcasa"></p>
+                </div>
+              </div>
+              <div class="div-item">
+                <p class="item-title">Habitaciones</p>
+                <div>
+                  <img src="styles/legend/HABITACION1.png" alt="Icono" />
+                  <p class="item-value" id="arrhabi"></p>
+                </div>
+              </div>
+              <div class="div-item">
+                <p class="item-title">Locales</p>
+                <div>
+                  <img src="styles/legend/LOCAL1.png" alt="Icono" />
+                  <p class="item-value" id="arrloca"></p>
+                </div>
+              </div>
+              <div class="div-item">
+                <p class="item-title">Lotes</p>
+                <div>
+                  <img src="styles/legend/LOTE1.png" alt="Icono" />
+                  <p class="item-value" id="arrlote"></p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class='col-10 ps-0'>
-            <div class='bg-light rounded text-center mb-1' style="height: 50vh;">
-              <div class="container-fluid">
-                <div class="row d-flex">
-                  <div class="col-12 d-flex justify-content-between align-items-center">
-                    <div class="align-items-center justify-content-center mx-auto">
-                      <h5>Estadisticas por tipo de Inmueble</h5>
-                    </div>
-                    <a href="statistics.html"><button class="align-items-center justify-content-center mx-auto"
-                        style="display: flex; padding: 1px; border-radius: 20%; margin: 1px; width: 25px; height: 25px;">⛶</button></a>
-                  </div>
-                </div>
+          <div class="div-statistics-container" id="div-statistics-container">
+            <div class="div-statistics border-per">
+              <div class="div-statistics-title">
+                <p>Estadisticas por tipo de inmueble</p>
+                <button
+                  class="btn-statistics-altern"
+                  id="boton_alternar"
+                  data-tipo="VENTA"
+                  onclick="alternarTipoDeOferta()"
+                >
+                  Cambiar a Arriendo
+                </button>
               </div>
-              <div id="chart_div" class="mb-5"></div>
-              <div class="py-2"><button id="boton_alternar" data-tipo="VENTA" style="width: 150px;"
-                  onclick="alternarTipoDeOferta()">Cambiar a Arriendo</button></div>
+              <div id="chart_div" class="div-statistics-chart"></div>
             </div>
-            <div class='bg-light rounded text-center' style="height: 49.5vh;">
-              <div class="container-fluid">
-                <div class="row d-flex">
-                  <div class="col-12 d-flex justify-content-between align-items-center">
-                    <div class="align-items-center justify-content-center mx-auto">
-                      <h5>Intervalo de Valor por Inmueble</h5>
-                    </div>
-                    <a href="statistics.html"><button class="align-items-center justify-content-center mx-auto"
-                        style="display: flex; padding: 1px; border-radius: 20%; margin: 1px; width: 25px; height: 25px;">⛶</button></a>
-                  </div>
-                </div>
+            <div class="div-statistics border-per">
+              <div class="div-statistics-title">
+                <p>Intervalo de valor por inmueble</p>
+                <button
+                  class="btn-statistics-altern"
+                  id="boton_alternar2"
+                  data-tipo="VENTA"
+                  onclick="alternarTipoDeOferta2()"
+                >
+                  Cambiar a Arriendo
+                </button>
               </div>
-              <div id="chart_div2" class="mb-5"></div>
-              <div class="py-2"><button id="boton_alternar2" data-tipo="VENTA" style="width: 150px;"
-                  onclick="alternarTipoDeOferta2()">Cambiar a Arriendo</button></div>
+              <div id="chart_div2" class="div-statistics-chart"></div>
             </div>
           </div>
         </div>
       </div>
+      <div class="spinner-container" id="spinner-container">
+        <div class="spinner-icon"></div>
+        <div class="spinner-text">Cargando...</div>
+        <p>Esto podría tardar unos segundos.</p>
+      </div>
     </div>
-  </div>
 
-
-  <script src="resources/qgis2web_expressions.js"></script>
-  <script src="resources/polyfills.js"></script>
-  <script src="./resources/functions.js"></script>
-  <script src="./resources/ol.js"></script>
-  <script src="./resources/ol-layerswitcher.js"></script>
-  <script src="layers/PUNTOS_DE_INTERES_URBANIZACIONES.js"></script>
-  <script src="layers/OFERTAS_OBSERVATORIO.js"></script>
-  <script src="layers/U_PERIMETRO.js"></script>
-  <script src="layers/U_MANZANA.js"></script>
-  <script src="layers/U_SECTOR.js"></script>
-  <script src="layers/U_LC_TERRENO.js"></script>
-  <script src="layers/U_NOMENCLATRURA_VIAL.js"></script>
-  <script src="styles/ARRIENDOLOTE_0_style.js"></script>
-  <script src="styles/ARRIENDOLOCAL_1_style.js"></script>
-  <script src="styles/ARRIENDOHABITACION_2_style.js"></script>
-  <script src="styles/ARRIENDOCASA_3_style.js"></script>
-  <script src="styles/ARRIENDOBODEGA_4_style.js"></script>
-  <script src="styles/ARRIENDOAPTO_5_style.js"></script>
-  <script src="styles/VENTALOTE_6_style.js"></script>
-  <script src="styles/VENTALOCAL_7_style.js"></script>
-  <script src="styles/VENTAHABITACION_8_style.js"></script>
-  <script src="styles/VENTACASA_9_style.js"></script>
-  <script src="styles/VENTABODEGA_10_style.js"></script>
-  <script src="styles/VENTAAPTO_11_style.js"></script>
-  <script src="styles/PUNTOS_DE_INTERES_URBANIZACIONES_LOTE_12_style.js"></script>
-  <script src="styles/PUNTOS_DE_INTERES_URBANIZACIONES_CONDOMINIO_13_style.js"></script>
-  <script src="styles/PUNTOS_DE_INTERES_URBANIZACIONES_CASA_14_style.js"></script>
-  <script src="styles/PUNTOS_DE_INTERES_URBANIZACIONES_APARTAMENTO_15_style.js"></script>
-  <script src="styles/Perimetro_23_style.js"></script>
-  <script src="styles/Manzana_24_style.js"></script>
-  <script src="styles/Sector_25_style.js"></script>
-  <script src="styles/Terreno_26_style.js"></script>
-  <script src="styles/U_NOMENCLATRURA_VIAL_27_style.js"></script>
-  <script src="./layers/layers.js" type="text/javascript"></script>
-  <script src="./resources/Autolinker.min.js"></script>
-  <script src="./resources/qgis2web.js"></script>
-  <script type="text/javascript" src="resources/chart.js"></script>
-  <script type="text/javascript" src="resources/chart2.js"></script>
-  <script type="text/javascript" src="resources/count.js"></script>
-</body>
-
+    <script src="resources/qgis2web_expressions.js"></script>
+    <script src="resources/polyfills.js"></script>
+    <script src="./resources/functions.js"></script>
+    <script src="./resources/ol.js"></script>
+    <script src="./resources/ol-layerswitcher.js"></script>
+    <script src="layers/PUNTOS_DE_INTERES_URBANIZACIONES.js"></script>
+    <script src="layers/OFERTAS_OBSERVATORIO.js"></script>
+    <script src="layers/U_PERIMETRO.js"></script>
+    <script src="layers/U_MANZANA.js"></script>
+    <script src="layers/U_SECTOR.js"></script>
+    <script src="layers/U_LC_TERRENO.js"></script>
+    <script src="layers/U_NOMENCLATRURA_VIAL.js"></script>
+    <script src="styles/ARRIENDOLOTE_0_style.js"></script>
+    <script src="styles/ARRIENDOLOCAL_1_style.js"></script>
+    <script src="styles/ARRIENDOHABITACION_2_style.js"></script>
+    <script src="styles/ARRIENDOCASA_3_style.js"></script>
+    <script src="styles/ARRIENDOBODEGA_4_style.js"></script>
+    <script src="styles/ARRIENDOAPTO_5_style.js"></script>
+    <script src="styles/VENTALOTE_6_style.js"></script>
+    <script src="styles/VENTALOCAL_7_style.js"></script>
+    <script src="styles/VENTAHABITACION_8_style.js"></script>
+    <script src="styles/VENTACASA_9_style.js"></script>
+    <script src="styles/VENTABODEGA_10_style.js"></script>
+    <script src="styles/VENTAAPTO_11_style.js"></script>
+    <script src="styles/PUNTOS_DE_INTERES_URBANIZACIONES_LOTE_12_style.js"></script>
+    <script src="styles/PUNTOS_DE_INTERES_URBANIZACIONES_CONDOMINIO_13_style.js"></script>
+    <script src="styles/PUNTOS_DE_INTERES_URBANIZACIONES_CASA_14_style.js"></script>
+    <script src="styles/PUNTOS_DE_INTERES_URBANIZACIONES_APARTAMENTO_15_style.js"></script>
+    <script src="styles/Perimetro_23_style.js"></script>
+    <script src="styles/Manzana_24_style.js"></script>
+    <script src="styles/Sector_25_style.js"></script>
+    <script src="styles/Terreno_26_style.js"></script>
+    <script src="styles/U_NOMENCLATRURA_VIAL_27_style.js"></script>
+    <script src="./layers/layers.js" type="text/javascript"></script>
+    <script src="./resources/Autolinker.min.js"></script>
+    <script src="./resources/qgis2web.js"></script>
+    <script type="text/javascript" src="resources/chart.js"></script>
+    <script type="text/javascript" src="resources/chart2.js"></script>
+    <script type="text/javascript" src="resources/count.js"></script>
+    <script type="text/javascript" src="resources/index.js"></script>
+  </body>
 </html>
