@@ -34,9 +34,9 @@ var conteoPropiedadesVentaOArriendo = propiedadesVentaOArriendo.length;
 document.getElementById("todos").innerHTML = conteoPropiedadesVentaOArriendo;
 
 
-// Filtrar todas las propiedades con "TIPO_DE_OF" = "VENTA" y "TIPO_DE_IN" = "APTO"
+// Filtrar todas las propiedades con "TIPO_DE_OF" = "VENTA" y "TIPO_DE_IN" = "APARTAMENTO"
 var propiedadesFiltradas = json_OFERTAS_OBSERVATORIO.features.filter(function (feature) {
-    return feature.properties.TIPO_DE_OF === "VENTA" && feature.properties.TIPO_DE_IN === "APTO";
+    return feature.properties.TIPO_DE_OF === "VENTA" && feature.properties.TIPO_DE_IN === "APARTAMENTO";
 });
 // Contar el número de propiedades filtradas
 var conteoPropiedadesFiltradas = propiedadesFiltradas.length;
@@ -91,7 +91,7 @@ document.getElementById("venlote").innerHTML = conteoPropiedadesFiltradas;
 
 // Filtrar todas las propiedades con "TIPO_DE_OF" = "ARRIENDO" y "TIPO_DE_IN" = "APTO"
 var propiedadesFiltradas = json_OFERTAS_OBSERVATORIO.features.filter(function (feature) {
-    return feature.properties.TIPO_DE_OF === "ARRIENDO" && feature.properties.TIPO_DE_IN === "APTO";
+    return feature.properties.TIPO_DE_OF === "ARRIENDO" && feature.properties.TIPO_DE_IN === "APARTAMENTO";
 });
 // Contar el número de propiedades filtradas
 var conteoPropiedadesFiltradas = propiedadesFiltradas.length;
